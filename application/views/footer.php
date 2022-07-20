@@ -1,7 +1,7 @@
 <footer class="main-footer">
-   <strong>Devloped By <a href="http://getsourcecodes.com" target="_blank">Getsourcecodes</a>.</strong>
+   <strong>Ⓒ Copyright 2022 - Surya Prima</strong>
    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0
+      <b>Developed By Dewa</b>
    </div>
 </footer>
 </div>

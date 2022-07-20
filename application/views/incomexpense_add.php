@@ -65,8 +65,6 @@
                       </div>
                     </div>
                     
-                   
-      
                 </div>
                  <input type="hidden" id="ie_created_date" name="ie_created_date" value="<?php echo date('Y-m-d h:i:s'); ?>">
   
