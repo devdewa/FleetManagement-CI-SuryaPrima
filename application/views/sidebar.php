@@ -2,7 +2,8 @@
    <?php $data = sitedata();  ?>
    <a href="<?= base_url(); ?>/dashboard" class="brand-link">
    <img src="<?= base_url().'assets/uploads/'.$data['s_logo'] ?>" class="brand-image img-circle elevation-1 frlogo">
-   <span class="brand-text font-weight-light"><?php echo ucfirst(output($this->session->userdata['session_data']['name'])); ?></span>
+   <span class="brand-text font-weight-light">Surya Prima</span>
+   <!-- <?php echo ucfirst(output($this->session->userdata['session_data']['name'])); ?> -->
    </a>
    <div class="sidebar">
       <nav class="mt-2">

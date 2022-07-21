@@ -84,7 +84,7 @@
                         <input id="add-device-color" name="v_color" class="jscolor {valueElement:'add-device-color', styleElement:'add-device-color', hash:true, mode:'HSV'} form-control"  value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_color']:'#F399EB' ?>" required>
                       </div>
                     </div>
-                    <?php if(isset($vehicledetails[0]['v_is_active'])) { ?>
+                    <!-- <?php if(isset($vehicledetails[0]['v_is_active'])) { ?>
                     <div class="col-sm-6 col-md-4">
                       <div class="form-group">
                         <label for="v_is_active" class="form-label">Vehicle Status</label>
@@ -95,7 +95,13 @@
                         </select>
                       </div>
                     </div>
-                  <?php } ?>
+                  <?php } ?> -->
+                  <div class="col-sm-6 col-md-4">
+                      <div class="form-group">
+                        <label class="form-label">Status</label>
+                        <input type="text" required="" name="v_is_active" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_is_active']:'' ?>" class="form-control" placeholder="Status">
+                      </div>
+                  </div>
                   <div class="col-sm-6 col-md-4">
                       <div class="form-group">
                         <label class="form-label">Registration Expiry Date</label>

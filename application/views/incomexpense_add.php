@@ -37,19 +37,23 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                          <label class="form-label">Type<span class="form-required">*</span></label>
-                         <select name="ie_type" id="ie_type" class="form-control">
-                        <option value="">Select type</option>
-                        <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'income'){ echo 'selected';} ?> value="income">Income</option>
-                        <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'expense'){ echo 'selected';} ?> value="expense">Expense</option>
-                      </select>
+                        <label class="form-label">Type<span class="form-required">*</span></label>
+                        <select name="ie_type" id="ie_type" class="form-control">
+                          <option value="">Select type</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Change Part'){ echo 'selected';} ?> value="Change Part">Change Part</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Maintenance'){ echo 'selected';} ?> value="Maintenance">Maintenance</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'STNK'){ echo 'selected';} ?> value="STNK">STNK</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'KIR'){ echo 'selected';} ?> value="KIR">KIR</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Repair Service'){ echo 'selected';} ?> value="Repair Service">Repair Service</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Anti Rust'){ echo 'selected';} ?> value="Anti Rust">Anti Rust</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Etc'){ echo 'selected';} ?> value="Etc">Etc</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
                           <label class="form-label">Date<span class="form-required">*</span></label>
-                         <input type="text" class="form-control datepicker" id="ie_date" name="ie_date" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_date']:'' ?>" placeholder="Income/Expense">
-
+                          <input type="text" class="form-control datepicker" id="ie_date" name="ie_date" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_date']:'' ?>" placeholder="Income/Expense">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
@@ -64,13 +68,18 @@
                           <input type="text" class="form-control" id="ie_amount" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_amount']:'' ?>" name="ie_amount" placeholder="Amount">
                       </div>
                     </div>
-                    
+                    <div class="col-sm-6 col-md-3">
+                      <div class="form-group">
+                         <label class="form-label">Store<span class="form-required">*</span></label>
+                          <input type="text" class="form-control" id="ie_store" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_store']:'' ?>" name="ie_store" placeholder="Store">
+                      </div>
+                    </div>
+                          
                 </div>
                  <input type="hidden" id="ie_created_date" name="ie_created_date" value="<?php echo date('Y-m-d h:i:s'); ?>">
   
-      <div class="modal-footer">
-
-                  <button type="submit" class="btn btn-primary"> <?php echo (isset($incomexpensedetails))?'Update Income/Expense':'Add Income/Expense' ?></button>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary"> <?php echo (isset($incomexpensedetails))?'Update Income/Expense':'Add Income/Expense' ?></button>
       </div>
     </form>
              </div>

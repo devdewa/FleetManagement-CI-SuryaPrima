@@ -31,14 +31,23 @@
                         <th>Registration Expiry Date</th>
                         <th>Tax Date</th>
                         <th>KIR</th>
-                        <th>Is Active</th>
+                        <th>Reminder</th>
+                        <th>Status</th>
                         <?php if (userpermission('lr_vech_list_view') || userpermission('lr_vech_list_edit')) { ?>
                         <th>Action</th>
                         <?php } ?>
                      </tr>
                   </thead>
                   <tbody>
-                     <?php if(!empty($vehiclelist)){  $count=1; foreach($vehiclelist as $vehiclelists){  ?>
+                     <?php if (
+                        !empty($vehiclelist)) { 
+                           $count = 1 ;
+                           $future_timestamp = strtotime("+1 month");
+                           foreach (
+                              $vehiclelist as $vehiclelists
+                           )
+                        {  
+                     ?>
                      <tr>
                         <td><?php echo output($count); $count++; ?></td>
                         <td><?php echo output($vehiclelists['v_name']); ?></td>
@@ -49,7 +58,7 @@
                         <td><?php echo output($vehiclelists['v_reg_exp_date']); ?></td>
                         <td><?php echo output($vehiclelists['v_tax']); ?></td>
                         <td><?php echo output($vehiclelists['v_kir']); ?></td>
-                        <td><span class="badge <?php echo ($vehiclelists['v_is_active']=='1') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($vehiclelists['v_is_active']=='1') ? 'Active' : 'Inactive'; ?></span>  
+                        <td><?php echo output($vehiclelists['v_is_active']); ?></td>
                         </td>
                         <?php if(userpermission('lr_vech_list_view') || userpermission('lr_vech_list_edit')) { ?>
                         <td>

@@ -32,6 +32,7 @@
                           <th>Date</th>
                           <th>Description</th>
                           <th>Amount</th>
+                          <th>Store</th>
                           <th>Type</th>
                           <?php if(userpermission('lr_ie_edit')) { ?>
                           <th>Action</th>
@@ -43,21 +44,22 @@
                       <?php $count=1;
                            foreach($incomexpense as $incomexpenses){
                            ?>
-                        <tr>
-                           <td> <?php echo output($count); $count++; ?></td>
-                           <td> <?php echo output($incomexpenses['vech_name']->v_name).'_'.output($incomexpenses['vech_name']->v_registration_no); ?></td>
-                           <td> <?php echo output($incomexpenses['ie_date']); ?></td>
-
-                           <td><?php echo output($incomexpenses['ie_description']); ?></td>
-                         <td><?php echo output($incomexpenses['ie_amount']); ?></td>
-                          <td>  <span class="badge <?php echo ($incomexpenses['ie_type']=='income') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($incomexpenses['ie_type']=='income') ? 'Income' : 'Expense'; ?></span>  </td>
-                          <?php if(userpermission('lr_ie_edit')) { ?>
-                              <td>
+                          <tr>
+                            <td> <?php echo output($count); $count++; ?></td>
+                            <td> <?php echo output($incomexpenses['vech_name']->v_name).'_'.output($incomexpenses['vech_name']->v_registration_no); ?></td>
+                            <td> <?php echo output($incomexpenses['ie_date']); ?></td>
+                            <td><?php echo output($incomexpenses['ie_description']); ?></td>
+                            <td><?php echo output($incomexpenses['ie_amount']); ?></td>
+                            <td><?php echo output($incomexpenses['ie_store']); ?></td>
+                            <td><?php echo output($incomexpenses['ie_type']); ?></td>
+                            <!-- <td>  <span class="badge <?php echo ($incomexpenses['ie_type']=='income') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($incomexpenses['ie_type']=='income') ? 'Income' : 'Expense'; ?></span>  </td> -->
+                            <?php if(userpermission('lr_ie_edit')) { ?>
+                            <td>
                             <a class="icon" href="<?php echo base_url(); ?>incomexpense/editincomexpense/<?php echo output($incomexpenses['ie_id']); ?>">
                               <i class="fa fa-edit"></i>
                             </a>
-                          </td>
-                        <?php } ?>
+                            </td>
+                            <?php } ?>
                         </tr>
                         <?php } ?>
                       </tbody>

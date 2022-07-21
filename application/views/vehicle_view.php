@@ -33,8 +33,9 @@
                 <h3 class="profile-username text-center"><?= ucwords($vehicledetails['v_name']); ?></h3>
 
                 <p class="text-muted text-center"><?= ucwords($vehicledetails['v_type']); ?></p>
+                <p class="text-muted text-center"><?= ucwords($vehicledetails['v_is_active']); ?></p>
 
-                <p class="text-muted text-center"><?= ($vehicledetails['v_is_active']==1)?'<span class="right badge badge-success">Active</span>':'<span class="right badge badge-danger">Inactive</span>' ?></p>
+                <!-- <p class="text-muted text-center"><?= ($vehicledetails['v_is_active']==1)?'<span class="right badge badge-success">Active</span>':'<span class="right badge badge-danger">Inactive</span>' ?></p> -->
 
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
@@ -200,19 +201,22 @@
                           <thead>
                               <tr>
                                   <th class="percent1">
-                                      #
+                                    #
                                   </th>
                                   <th class="percent25">
-                                      Date
+                                    Date
                                   </th>
                                   <th class="percent25">
-                                      Description
+                                    Description
                                   </th>
                                   <th class="percent25">
                                     Amount
                                   </th>
                                   <th class="percent25">
-                                      Type
+                                    Store
+                                  </th>
+                                  <th class="percent25">
+                                    Type
                                   </th>
                                   <th class="percent25">
                                     Action
@@ -238,8 +242,14 @@
                                      <?php echo output($incomexpensdata['ie_amount']);?>
                                   </td>
                                   <td>
-                                     <?php echo ($incomexpensdata['ie_type']=='income')?'<span class="right badge badge-success">Income</span>':'<span class="right badge badge-danger">Expense</span>'; ?>
+                                     <?php echo output($incomexpensdata['ie_store']);?>
                                   </td>
+                                  <td>
+                                     <?php echo output($incomexpensdata['ie_type']);?>
+                                  </td>
+                                  <!-- <td>
+                                     <?php echo ($incomexpensdata['ie_type']=='income')?'<span class="right badge badge-success">Income</span>':'<span class="right badge badge-danger">Expense</span>'; ?>
+                                  </td> -->
                                  <td> <a class="icon" href="<?php echo base_url(); ?>incomexpense">
                                      <i class="fa fa-eye"></i>
                                     </a> 
@@ -273,6 +283,10 @@
                     <tr>
                       <td>Tax Date</td>
                       <td><?= output($vehicledetails['v_tax']) ?></td>
+                    </tr>
+                    <tr>
+                      <td>KIR</td>
+                      <td><?= output($vehicledetails['v_kir']) ?></td>
                     </tr>
                     <tr>
                       <td>Engine No.</td>
