@@ -30,6 +30,7 @@
                         <th>Group</th>
                         <th>Registration Expiry Date</th>
                         <th>Tax Date</th>
+                        <th>KIR</th>
                         <th>Is Active</th>
                         <?php if (userpermission('lr_vech_list_view') || userpermission('lr_vech_list_edit')) { ?>
                         <th>Action</th>
@@ -47,6 +48,7 @@
                         <td><?php echo output($vehiclelists['gr_name']); ?></td>
                         <td><?php echo output($vehiclelists['v_reg_exp_date']); ?></td>
                         <td><?php echo output($vehiclelists['v_tax']); ?></td>
+                        <td><?php echo output($vehiclelists['v_kir']); ?></td>
                         <td><span class="badge <?php echo ($vehiclelists['v_is_active']=='1') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($vehiclelists['v_is_active']=='1') ? 'Active' : 'Inactive'; ?></span>  
                         </td>
                         <?php if(userpermission('lr_vech_list_view') || userpermission('lr_vech_list_edit')) { ?>

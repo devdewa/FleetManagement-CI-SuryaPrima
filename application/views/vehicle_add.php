@@ -119,6 +119,12 @@
                       <input type="text" name="v_tax" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax']:'' ?>" class="form-control datepicker" placeholder="Tax Date">
                     </div>
                   </div>
+                  <div class="col-sm-6 col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">KIR</label>
+                      <input type="text" name="v_kir" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir']:'' ?>" class="form-control datepicker" placeholder="KIR">
+                    </div>
+                  </div>
                     </div>
                     <hr>
                     <div class="form-label"><b>GPS API Details(Feed GPS Data)</b></div>
