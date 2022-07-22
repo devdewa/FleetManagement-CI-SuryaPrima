@@ -74,13 +74,13 @@
                           <thead>
                               <tr>
                                   <th class="percent1">
-                                      #
+                                    #
                                   </th>
                                   <th class="percent25">
-                                      Driver
+                                    Driver
                                   </th>
                                   <th class="percent25">
-                                      Customer
+                                    Customer
                                   </th>
                                   <th class="percent25">
                                     From & To
@@ -88,9 +88,8 @@
                                   <th class="percent25">
                                     Booking Value
                                   </th>
-                                 
                                   <th class="percent25">
-                                      Trip Status
+                                    Trip Status
                                   </th>
                                   <th class="percent25">
                                     Action
@@ -281,12 +280,16 @@
                       <td><?= output($vehicledetails['v_assembly']) ?></td>
                     </tr>
                     <tr>
+                      <td>Registration Expiry Date</td>
+                      <td><?= output($vehicledetails['v_reg_exp_date']) ?> | <span class="text-danger"><?= output($vehicledetails['v_reg_exp_date_reminder']) ?></span></td>
+                    </tr>
+                    <tr>
                       <td>Tax Date</td>
-                      <td><?= output($vehicledetails['v_tax']) ?></td>
+                      <td><?= output($vehicledetails['v_tax']) ?> | <span class="text-danger"><?= output($vehicledetails['v_tax_reminder']) ?></span></td>
                     </tr>
                     <tr>
                       <td>KIR</td>
-                      <td><?= output($vehicledetails['v_kir']) ?></td>
+                      <td><?= output($vehicledetails['v_kir']) ?> | <span class="text-danger"><?= output($vehicledetails['v_kir_reminder']) ?></span></td>
                     </tr>
                     <tr>
                       <td>Engine No.</td>
