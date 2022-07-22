@@ -45,9 +45,9 @@
                            foreach($incomexpense as $incomexpenses){
                            ?>
                           <tr>
-                            <td> <?php echo output($count); $count++; ?></td>
-                            <td> <?php echo output($incomexpenses['vech_name']->v_name).'_'.output($incomexpenses['vech_name']->v_registration_no); ?></td>
-                            <td> <?php echo output($incomexpenses['ie_date']); ?></td>
+                            <td><?php echo output($count); $count++; ?></td>
+                            <td><?php echo output($incomexpenses['vech_name']->v_name).'_'.output($incomexpenses['vech_name']->v_registration_no); ?></td>
+                            <td><?php echo output($incomexpenses['ie_date']); ?></td>
                             <td><?php echo output($incomexpenses['ie_description']); ?></td>
                             <td><?php echo output($incomexpenses['ie_amount']); ?></td>
                             <td><?php echo output($incomexpenses['ie_store']); ?></td>

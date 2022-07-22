@@ -17,13 +17,13 @@ class Incomexpense extends CI_Controller {
 	public function index()
 	{
 		$data['incomexpense'] = $this->Incomexpense_model->getall_incomexpense();
-		$this->template->template_render('incomexpense',$data);
+		$this->template->template_render('incomexpense', $data);
 	}
 	public function addincomexpense()
 	{
 		$this->load->model('trips_model');
 		$data['vechiclelist'] = $this->trips_model->getall_vechicle();
-		$this->template->template_render('incomexpense_add',$data);
+		$this->template->template_render('incomexpense_add', $data);
 	}
 	public function insertincomexpense()
 	{
