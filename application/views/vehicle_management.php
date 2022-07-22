@@ -31,7 +31,6 @@
                         <th>Registration Expiry Date</th>
                         <th>Tax Date</th>
                         <th>KIR</th>
-                        <th>Reminder</th>
                         <th>Status</th>
                         <?php if (userpermission('lr_vech_list_view') || userpermission('lr_vech_list_edit')) { ?>
                         <th>Action</th>
