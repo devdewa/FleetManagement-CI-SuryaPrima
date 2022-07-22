@@ -28,7 +28,7 @@
                         <th>Model</th>
                         <th>Assembly Year</th>
                         <th>Group</th>
-                        <th>Registration Expiry Date</th>
+                        <th>Police Plate</th>
                         <th>Tax Date</th>
                         <th>KIR</th>
                         <th>Status</th>
@@ -54,7 +54,7 @@
                         <td><?php echo output($vehiclelists['v_model']); ?></td>
                         <td><?php echo output($vehiclelists['v_assembly']); ?></td>
                         <td><?php echo output($vehiclelists['gr_name']); ?></td>
-                        <td><?php echo output($vehiclelists['v_reg_exp_date']); ?></td>
+                        <td><?php echo output($vehiclelists['v_plate']); ?></td>
                         <td><?php echo output($vehiclelists['v_tax']); ?></td>
                         <td><?php echo output($vehiclelists['v_kir']); ?></td>
                         <td><?php echo output($vehiclelists['v_is_active']); ?></td>

@@ -280,8 +280,8 @@
                       <td><?= output($vehicledetails['v_assembly']) ?></td>
                     </tr>
                     <tr>
-                      <td>Registration Expiry Date</td>
-                      <td><?= output($vehicledetails['v_reg_exp_date']) ?> | <span class="text-danger"><?= output($vehicledetails['v_reg_exp_date_reminder']) ?></span></td>
+                      <td>Police Plate</td>
+                      <td><?= output($vehicledetails['v_plate']) ?> | <span class="text-danger"><?= output($vehicledetails['v_plate_reminder']) ?></span></td>
                     </tr>
                     <tr>
                       <td>Tax Date</td>
