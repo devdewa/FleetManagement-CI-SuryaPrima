@@ -41,17 +41,17 @@
                            foreach($fuel as $fuels){
                            ?>
                         <tr>
-                           <td> <?php echo output($count); $count++; ?></td>
-                            <td> <?php echo output($fuels['v_fuelfilldate']); ?></td>
-                           <td> <?php echo output($fuels['vech_name']->v_name); ?></td>
-                           <td> <?php echo output($fuels['v_fuel_quantity']); ?></td>
+                           <td><?php echo output($count); $count++; ?></td>
+                           <td><?php echo output($fuels['v_fuelfilldate']); ?></td>
+                           <td><?php echo output($fuels['vech_name']->v_name); ?></td>
+                           <td><?php echo output($fuels['v_fuel_quantity']); ?></td>
                            <td><?php echo output($fuels['v_fuelprice']); ?></td>
                            <td><?php echo output($fuels['filled_by']->d_name); ?></td>
                            <td><?php echo output($fuels['v_odometerreading']); ?></td>
                            <td><?php echo output($fuels['v_fuelcomments']); ?></td>
                            <?php if(userpermission('lr_fuel_edit')) { ?>
                               <td>
-                            <a class="icon" href="<?php echo base_url(); ?>fuel/editfuel/<?php echo output($fuels['v_fuel_id']); ?>">
+                              <a class="icon" href="<?php echo base_url(); ?>fuel/editfuel/<?php echo output($fuels['v_fuel_id']); ?>">
                               <i class="fa fa-edit"></i>
                             </a>
                           </td>

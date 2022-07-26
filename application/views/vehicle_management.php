@@ -16,6 +16,29 @@
 </div>
 <section class="content">
    <div class="container-fluid">
+   <div class="dropdown">
+      <button type="button" class="btn btn-warning mb-3" data-toggle="dropdown">
+         <i class="fas fa-bell"></i> <span class="badge badge-light" id="notif"></span>
+      </button>
+      <div id="pesan" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+         <?php if (
+            !empty($vehiclelist)) { 
+               $count = 1 ;
+               $future_timestamp = strtotime("+1 month");
+               foreach (
+                  $vehiclelist as $vehiclelists
+               )
+            {  
+         ?>
+
+         <!-- Tampil -->
+         <p>TAX | <?php echo output($vehiclelists['v_tax_reminder']); ?></p>
+         <p>KIR | <?php echo output($vehiclelists['v_kir_reminder']); ?></p>
+         <p>PLATE | <?php echo output($vehiclelists['v_plate_reminder']); ?></p>
+
+         <?php } } ?>
+      </div>
+   </div>
       <div class="card">
          <div class="card-body p-0">
             <div class="table-responsive">
@@ -41,7 +64,6 @@
                      <?php if (
                         !empty($vehiclelist)) { 
                            $count = 1 ;
-                           $future_timestamp = strtotime("+1 month");
                            foreach (
                               $vehiclelist as $vehiclelists
                            )

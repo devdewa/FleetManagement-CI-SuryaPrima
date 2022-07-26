@@ -53,8 +53,7 @@
          <ul class="navbar-nav ml-auto">
             <!-- Messages Dropdown Menu -->
             <!-- Notifications Dropdown Menu -->
-            <li class="nav-item d-flex align-items-center">
-               <i class="fas fa-sign-out-alt"></i>
+            <li class="nav-item d-flex align-items-center">=
                <a class="nav-link p-0 m-0 h-50"  href="<?= base_url(); ?>login/logout">
                   <i class="fas fa-sign-out-alt"></i>
                </a>
