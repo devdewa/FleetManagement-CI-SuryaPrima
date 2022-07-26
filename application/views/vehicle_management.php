@@ -22,11 +22,11 @@
       </button>
       <div id="pesan" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
          <?php if (
-            !empty($vehiclelist)) { 
+            !empty($vehiclelistt)) { 
                $count = 1 ;
                $future_timestamp = strtotime("+1 month");
                foreach (
-                  $vehiclelist as $vehiclelists
+                  $vehiclelistt as $vehiclelists
                )
             {  
          ?>
