@@ -136,7 +136,41 @@
                    <?php } ?>
                </ul>
             </li>
-            <?php }  if(userpermission('lr_fuel_list') || userpermission('lr_fuel_add')) { ?>
+            
+            <?php } ?>
+            <?php if(userpermission('lr_cust_list') || userpermission('lr_cust_add')) { ?>
+               <li class="nav-item has-treeview <?php echo ((activate_menu('supplier'))=='active') ? 'menu-open':'' ?>
+                  <?php echo ((activate_menu('addsupplier'))=='active') ? 'menu-open':'' ?><?php echo ((activate_menu('editsupplier'))=='active') ? 'menu-open':'' ?>">
+                  <a href="#" class="nav-link <?php echo activate_menu('supplier');?> <?php echo activate_menu('addsupplier');?><?php echo activate_menu('editsupplier');?>">
+                     <i class="nav-icon fas fa-user"></i>
+                     <p>
+                        Supplier
+                        <i class="right fas fa-angle-left"></i>
+                     </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                  <?php  if(userpermission('lr_cust_list')) { ?>
+                     <li class="nav-item">
+                        <a href="<?= base_url(); ?>supplier" class="nav-link <?php echo activate_menu('supplier');?><?php echo activate_menu('editsupplier');?>">
+                           <i class="nav-icon fas faa-list"></i>
+                           <p>Supplier Management</p>
+                        </a>
+                     </li>
+                     <?php } if(userpermission('lr_cust_add')) { ?>
+                     <li class="nav-item">
+                        <a href="<?= base_url(); ?>supplier/addsupplier" class="nav-link <?php echo activate_menu('addsupplier');?>">
+                           <i class="nav-icon fas faa-plus"></i>
+                           <p>Add supplier</p>
+                        </a>
+                     </li>
+                     <?php } ?>
+                  </ul>
+               </li>
+
+
+
+            <?php }
+            if(userpermission('lr_fuel_list') || userpermission('lr_fuel_add')) { ?>
             <li class="nav-item has-treeview <?php echo ((activate_menu('fuel'))=='active') ? 'menu-open':'' ?>
                <?php echo ((activate_menu('addfuel'))=='active') ? 'menu-open':'' ?> <?php echo ((activate_menu('editfuel'))=='active') ? 'menu-open':'' ?>">
                <a href="#" class="nav-link <?php echo activate_menu('fuel');?> <?php echo activate_menu('addfuel');?><?php echo activate_menu('editfuel');?>">

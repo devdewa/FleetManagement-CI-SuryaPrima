@@ -13,7 +13,10 @@ class Trips_model extends CI_Model{
 	} 
 	public function getall_vechicle() { 
 		return $this->db->select('*')->from('vehicles')->get()->result_array();
-	} 
+	}
+	public function getall_supplier() { 
+		return $this->db->select('*')->from('suppliers')->get()->result_array();
+	}  
 	public function getall_mybookings($c_id) { 
 		return $this->db->select('*')->from('trips')->where('t_customer_id',$c_id)->order_by('t_id','asc')->get()->result_array();
 	}

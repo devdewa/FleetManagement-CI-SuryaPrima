@@ -3,7 +3,7 @@
 class Incomexpense_model extends CI_Model{
 	
 	public function add_incomexpense($data) { 
-		return	$this->db->insert('incomeexpense',$data);
+		return $this->db->insert('incomeexpense', $data);
 	} 
     public function getall_incomexpense() { 
 		$incomexpense = $this->db->select('*')->from('incomeexpense')->order_by('ie_id','desc')->get()->result_array();
@@ -11,13 +11,14 @@ class Incomexpense_model extends CI_Model{
 			foreach ($incomexpense as $key => $incomexpenses) {
 				$newincomexpense[$key] = $incomexpenses;
 				$newincomexpense[$key]['vech_name'] =  $this->db->select('v_registration_no,v_name')->from('vehicles')->where('v_id',$incomexpenses['ie_v_id'])->get()->row();
+				$newincomexpense[$key]['supp_name'] =  $this->db->select('s_name')->from('suppliers')->where('s_id',$incomexpenses['ie_v_id'])->get()->row();
 			}
 			return $newincomexpense;
 		} else 
 		{
 			return false;
 		}
-	} 
+	}
 	public function editincomexpense($e_id) { 
 		return $this->db->select('*')->from('incomeexpense')->where('ie_id',$e_id)->get()->result_array();
 	}

@@ -124,7 +124,7 @@
           </div>
           <!-- /.col -->
         </div>
-                 <table  class="datatableexport table card-table">
+               <table  class="datatableexport table card-table">
                       <thead>
                         <tr>
                           <th class="w-1">S.No</th>

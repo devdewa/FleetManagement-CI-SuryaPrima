@@ -15,7 +15,7 @@ class Vehicle extends CI_Controller {
 	public function index()
 	{
 		$data['vehiclelist'] = $this->vehicle_model->getall_vehicle();
-		$data2['vehiclelistt'] = $this->vehicle_model->getall_vehicle();
+		// $data2['vehiclelistt'] = $this->vehicle_model->getall_vehicle();
 		$this->template->template_render('vehicle_management', $data);
 	}
 	public function addvehicle()

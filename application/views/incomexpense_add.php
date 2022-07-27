@@ -68,10 +68,21 @@
                           <input type="text" class="form-control" id="ie_amount" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_amount']:'' ?>" name="ie_amount" placeholder="Amount">
                       </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <!-- <div class="col-sm-6 col-md-3">
                       <div class="form-group">
                          <label class="form-label">Store<span class="form-required">*</span></label>
                           <input type="text" class="form-control" id="ie_store" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_store']:'' ?>" name="ie_store" placeholder="Store">
+                      </div>
+                    </div> -->
+                    <div class="col-sm-6 col-md-3">
+                      <div class="form-group">
+                        <label class="form-label">Store<span class="form-required">*</span></label>
+                        <select name="ie_store" id="ie_store" class="form-control">
+                          <option value="">Select</option>
+                          <?php  foreach ($supplierlist as $key => $supplierlists) { ?>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_store'] == $supplierlists['s_id']){ echo 'selected';} ?> value="<?php echo output($supplierlists['s_id']) ?>"><?php echo output($supplierlists['s_name']); ?></option>
+                          <?php  } ?>
+                        </select>
                       </div>
                     </div>
                           
