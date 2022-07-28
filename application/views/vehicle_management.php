@@ -28,13 +28,13 @@
                foreach (
                   $vehiclelistt as $vehiclelists
                )
-            {  
+            {
          ?>
 
          <!-- Tampil -->
-         <p>TAX | <?php echo output($vehiclelists['v_tax_reminder']); ?></p>
-         <p>KIR | <?php echo output($vehiclelists['v_kir_reminder']); ?></p>
-         <p>PLATE | <?php echo output($vehiclelists['v_plate_reminder']); ?></p>
+         <p><?php echo output($count); $count++; ?>. TAX | <?php echo output($vehiclelists['v_tax_reminder']); ?></p>
+         <p><?php echo output($count); $count++; ?>. KIR | <?php echo output($vehiclelists['v_kir_reminder']); ?></p>
+         <p><?php echo output($count); $count++; ?>. PLATE | <?php echo output($vehiclelists['v_plate_reminder']); ?></p>
 
          <?php } } ?>
       </div>

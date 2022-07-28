@@ -128,7 +128,7 @@
                       <div class="d-flex">
                         <label class="form-label mr-1 mb-0">Tax Date | </label>
                         <label class="form-label p-0 mb-0" for="tax_reminder"><i class="fas fa-bell"></i></label>
-                        <input type="text" name="v_tax_reminder" id="tax_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax_reminder']:'' ?>" class="form-control p-0 datepicker w-50 pl-2 border-0 text-danger">
+                        <input type="text" name="v_tax_reminder" id="tax_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax_reminder']:'' ?>" class="form-control p-0 datepickerpastdisable w-50 pl-2 border-0 text-danger">
                       </div>
                       <input type="text" name="v_tax" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax']:'' ?>" class="form-control datepicker mt-1" placeholder="Tax Date">
                     </div>
@@ -138,7 +138,7 @@
                       <div class="d-flex">
                         <label class="form-label mr-1 mb-0">KIR | </label>
                         <label class="form-label p-0 mb-0" for="kir_reminder"><i class="fas fa-bell"></i></label>
-                        <input type="text" name="v_kir_reminder" id="kir_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir_reminder']:'' ?>" class="form-control p-0 datepicker w-50 pl-2 border-0 text-danger">
+                        <input type="text" name="v_kir_reminder" id="kir_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir_reminder']:'' ?>" class="form-control p-0 datepickerpastdisable w-50 pl-2 border-0 text-danger">
                       </div>
                       <input type="text" name="v_kir" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir']:'' ?>" class="form-control datepicker mt-1" placeholder="KIR">
                     </div>

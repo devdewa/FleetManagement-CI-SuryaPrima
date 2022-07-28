@@ -12,7 +12,15 @@ class vehicle_model extends CI_Model{
 	  $this->db->order_by('v_id','desc');
 	  $query = $this->db->get();
 	  return $query->result_array();
-	} 
+	}
+	public function getall_notif() {
+		$this->db->select("*");
+		$this->db->from('vehicles');
+		$this->db->join('vehicle_group', 'vehicle_group.gr_id=vehicles.v_group','LEFT');
+		$this->db->order_by('v_id','desc');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 	public function get_vehicledetails($v_id) { 
 		return $this->db->select('*')->from('vehicles')->where('v_id',$v_id)->get()->result_array();
 	} 
