@@ -42,7 +42,7 @@
 
                   <div class="form-group">
                     <label>Date</label>
-                    <input type="text" class="form-control datepickerpastdisable" required="true" value="" id="r_date" name="r_date" placeholder="Enter Username" autocomplete="off">
+                    <input type="text" class="form-control datepickerpastdisable" required="true" value="" id="r_date" name="r_date" placeholder="Enter Date" autocomplete="off">
                   </div>
 
 
