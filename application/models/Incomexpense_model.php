@@ -42,6 +42,7 @@ class Incomexpense_model extends CI_Model{
 			foreach ($incomexpense as $key => $incomexpenses) {
 				$newincomexpense[$key] = $incomexpenses;
 				$newincomexpense[$key]['vech_name'] =  $this->db->select('v_registration_no,v_name')->from('vehicles')->where('v_id',$incomexpenses['ie_v_id'])->get()->row();
+				$newincomexpense[$key]['supp_name'] =  $this->db->select('s_name')->from('suppliers')->where('s_id',$incomexpenses['ie_store'])->get()->row();
 			}
 			return $newincomexpense;
 		} else 

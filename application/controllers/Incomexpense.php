@@ -11,7 +11,6 @@ class Incomexpense extends CI_Controller {
           $this->load->helper(array('form', 'url','string'));
           $this->load->library('form_validation');
           $this->load->library('session');
-
      }
 
 	public function index()

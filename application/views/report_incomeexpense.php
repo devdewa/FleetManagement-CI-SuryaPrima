@@ -147,7 +147,7 @@
                            <td><?php echo output($incomexpenses['ie_date']); ?></td>
                            <td><?php echo output($incomexpenses['ie_description']); ?></td>
                            <td><?php echo output($incomexpenses['ie_amount']); ?></td>
-                           <td><?php echo output($incomexpenses['ie_store']); ?></td>
+                           <td><?php echo output($incomexpenses['supp_name']->s_name); ?></td>
                           <td><span class="badge <?php echo ($incomexpenses['ie_type']=='income') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($incomexpenses['ie_type']=='income') ? 'Income' : 'Expense'; ?></span>  </td>
                         </tr>
                         <?php } ?>
