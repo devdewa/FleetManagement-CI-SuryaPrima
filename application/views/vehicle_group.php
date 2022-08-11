@@ -2,19 +2,19 @@
    <div class="container-fluid">
       <div class="row mb-2">
          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Vehicle Group
+            <h1 class="m-0 text-dark">Grup Kendaraan (Gudang)
             </h1>
          </div>
          <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Dashboard</a></li>
-               <li class="breadcrumb-item active">Vehicle Group</li>
+               <li class="breadcrumb-item active">Grup Kendaraan (Gudang)</li>
             </ol>
          </div>
       </div>
       <?php if(userpermission('lr_vech_group_action')) { ?>
       <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-add">
-      Add New Group
+         Tambah
       </button>
       <?php } ?>
    </div>
@@ -28,11 +28,11 @@
                   <thead>
                      <tr>
                         <th class="w-1">S.No</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Created Date</th>
+                        <th>Nama</th>
+                        <th>Deskripsi</th>
+                        <th>Tanggal dibuat</th>
                         <?php if(userpermission('lr_vech_group_action')) { ?>
-                        <th>Action</th>
+                        <th>Pilihan</th>
                         <?php } ?>
                      </tr>
                   </thead>

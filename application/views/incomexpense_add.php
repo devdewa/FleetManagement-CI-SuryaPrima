@@ -2,13 +2,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"><?php echo (isset($incomexpensedetails))?'Edit Income/Expense':'Add Income/Expense' ?>
+            <h1 class="m-0 text-dark"><?php echo (isset($incomexpensedetails))?'Edit Income/Expense':'Tambah Income/Expense' ?>
             </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Customer</a></li>
-              <li class="breadcrumb-item active"><?php echo (isset($incomexpensedetails))?'Edit Income/Expense':'Add Income/Expense' ?></li>
+              <li class="breadcrumb-item active"><?php echo (isset($incomexpensedetails))?'Edit Income/Expense':'Tambah Income/Expense' ?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,10 +25,10 @@
                    <input type="hidden" name="ie_id" id="ie_id" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_id']:'' ?>" >
 
                     <div class="col-sm-6 col-md-3">
-                          <label class="form-label">Vechicle<span class="form-required">*</span></label>
+                          <label class="form-label">Kendaraan<span class="form-required">*</span></label>
                       <div class="form-group">
                          <select id="ie_v_id"  class="form-control"  name="ie_v_id" >
-                        <option value="">Select Vechicle</option>
+                        <option value="">Pilih Kendaraan</option>
                         <?php  foreach ($vechiclelist as $key => $vechiclelists) { ?>
                         <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_v_id'] == $vechiclelists['v_id']){ echo 'selected';} ?> value="<?php echo output($vechiclelists['v_id']) ?>"><?php echo output($vechiclelists['v_name']).' - '. output($vechiclelists['v_registration_no']); ?></option>
                         <?php  } ?>
@@ -37,35 +37,35 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                        <label class="form-label">Type<span class="form-required">*</span></label>
+                        <label class="form-label">Jenis Transaksi<span class="form-required">*</span></label>
                         <select name="ie_type" id="ie_type" class="form-control">
-                          <option value="">Select type</option>
+                          <option value="">Pilih Jenis Transaksi</option>
                           <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Change Part'){ echo 'selected';} ?> value="Change Part">Change Part</option>
                           <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Maintenance'){ echo 'selected';} ?> value="Maintenance">Maintenance</option>
                           <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'STNK'){ echo 'selected';} ?> value="STNK">STNK</option>
                           <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'KIR'){ echo 'selected';} ?> value="KIR">KIR</option>
                           <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Repair Service'){ echo 'selected';} ?> value="Repair Service">Repair Service</option>
                           <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Anti Rust'){ echo 'selected';} ?> value="Anti Rust">Anti Rust</option>
-                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Etc'){ echo 'selected';} ?> value="Etc">Etc</option>
+                          <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_type'] == 'Dll'){ echo 'selected';} ?> value="Dll">Etc</option>
                         </select>
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                          <label class="form-label">Date<span class="form-required">*</span></label>
-                          <input type="text" class="form-control datepicker" id="ie_date" name="ie_date" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_date']:'' ?>" placeholder="Income/Expense">
+                          <label class="form-label">Tanggal<span class="form-required">*</span></label>
+                          <input type="text" class="form-control datepicker" id="ie_date" name="ie_date" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_date']:'' ?>" placeholder="Tanggal">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                       <label class="form-label">Description</label>
-                          <input type="text" class="form-control" id="ie_description" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_description']:'' ?>" name="ie_description" placeholder="Description">
+                       <label class="form-label">Deskripsi</label>
+                          <input type="text" class="form-control" id="ie_description" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_description']:'' ?>" name="ie_description" placeholder="Deskripsi">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                         <label class="form-label">Amount<span class="form-required">*</span></label>
-                          <input type="text" class="form-control" id="ie_amount" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_amount']:'' ?>" name="ie_amount" placeholder="Amount">
+                         <label class="form-label">Jumlah biaya<span class="form-required">*</span></label>
+                          <input type="text" class="form-control" id="ie_amount" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_amount']:'' ?>" name="ie_amount" placeholder="Jumlah biaya">
                       </div>
                     </div>
                     <!-- <div class="col-sm-6 col-md-3">
@@ -76,13 +76,20 @@
                     </div> -->
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                        <label class="form-label">Store<span class="form-required">*</span></label>
+                        <label class="form-label">Tempat<span class="form-required">*</span></label>
                         <select name="ie_store" id="ie_store" class="form-control">
-                          <option value="">Select</option>
+                          <option value="">Pilih Tempat</option>
                           <?php  foreach ($supplierlist as $key => $supplierlists) { ?>
                           <option <?php if((isset($incomexpensedetails)) && $incomexpensedetails[0]['ie_store'] == $supplierlists['s_id']){ echo 'selected';} ?> value="<?php echo output($supplierlists['s_id']) ?>"><?php echo output($supplierlists['s_name']); ?></option>
                           <?php  } ?>
                         </select>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                      <div class="form-group">
+                         <label class="form-label">Keterangan Tempat<span class="form-required">*</span></label>
+                          <input type="text" class="form-control" id="ie_ket_tempat" value="<?php echo (isset($incomexpensedetails)) ? $incomexpensedetails[0]['ie_ket_tempat']:'' ?>" name="ie_ket_tempat" placeholder="Keterangan Tempat">
                       </div>
                     </div>
                           

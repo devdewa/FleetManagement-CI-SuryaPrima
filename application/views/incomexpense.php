@@ -27,13 +27,14 @@
                     <table id="incomexpensetbl" class="table card-table">
                       <thead>
                         <tr>
-                          <th class="w-1">S.No</th>
-                          <th>Vechicle</th>
-                          <th>Date</th>
-                          <th>Description</th>
-                          <th>Amount</th>
-                          <th>Store</th>
-                          <th>Type</th>
+                          <th class="w-1">No</th>
+                          <th>Kendaraan</th>
+                          <th>Tanggal</th>
+                          <th>Deskripsi</th>
+                          <th>Jumlah biaya</th>
+                          <th>Tempat / Supplier</th>
+                          <th>Jenis Transaksi</th>
+                          <th>Ket Tempat</th>
                           <?php if(userpermission('lr_ie_edit')) { ?>
                           <th>Action</th>
                           <?php } ?>
@@ -53,6 +54,7 @@
                             <td><?php echo output($incomexpenses['supp_name']->s_name); ?></td>
                             <!-- <td><?php echo output($incomexpenses['ie_store']); ?></td> -->
                             <td><?php echo output($incomexpenses['ie_type']); ?></td>
+                            <td><?php echo output($incomexpenses['ie_ket_tempat']); ?></td>
                             <!-- <td>  <span class="badge <?php echo ($incomexpenses['ie_type']=='income') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($incomexpenses['ie_type']=='income') ? 'Income' : 'Expense'; ?></span>  </td> -->
                             <?php if(userpermission('lr_ie_edit')) { ?>
                             <td>

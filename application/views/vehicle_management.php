@@ -2,13 +2,13 @@
    <div class="container-fluid">
       <div class="row mb-2">
          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Vehicle's Management
+            <h1 class="m-0 text-dark">Manajemen Kendaraan
             </h1>
          </div>
          <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Dashboard</a></li>
-               <li class="breadcrumb-item active">Vehicle's Management</li>
+               <li class="breadcrumb-item active">Manajemen Kendaraan</li>
             </ol>
          </div>
       </div>
@@ -32,9 +32,9 @@
          ?>
 
          <!-- Tampil -->
-         <p><?php echo output($count); $count++; ?>. TAX | <?php echo output($vehiclelists['v_tax_reminder']); ?></p>
+         <p><?php echo output($count); $count++; ?>. STNK | <?php echo output($vehiclelists['v_tax_reminder']); ?></p>
          <p><?php echo output($count); $count++; ?>. KIR | <?php echo output($vehiclelists['v_kir_reminder']); ?></p>
-         <p><?php echo output($count); $count++; ?>. PLATE | <?php echo output($vehiclelists['v_plate_reminder']); ?></p>
+         <p><?php echo output($count); $count++; ?>. PLAT | <?php echo output($vehiclelists['v_plate_reminder']); ?></p>
 
          <?php } } ?>
       </div>
@@ -45,16 +45,16 @@
                <table id="vehiclelisttbl" class="table card-table table-vcenter text-nowrap">
                   <thead>
                      <tr>
-                        <th class="w-1">S.No</th>
-                        <th>Vehicle Name</th>
-                        <th>Registration Number</th>
-                        <th>Model</th>
-                        <th>Assembly Year</th>
-                        <th>Group</th>
-                        <th>Police Plate</th>
-                        <th>Tax Date</th>
-                        <th>KIR</th>
-                        <th>Status</th>
+                        <th class="w-1">No</th>
+                        <th>Merek Kendaraan</th>
+                        <th>No. PLAT Kendaraan</th>
+                        <th>Model & Tipe</th>
+                        <th>Tahun Pembuatan</th>
+                        <th>Gudang / Tempat</th>
+                        <th>Masa berlaku PLAT</th>
+                        <th>Masa berlaku STNK</th>
+                        <th>Masa berlaku KIR</th>
+                        <th>Keterangan Tambahan</th>
                         <?php if (userpermission('lr_vech_list_view') || userpermission('lr_vech_list_edit')) { ?>
                         <th>Action</th>
                         <?php } ?>

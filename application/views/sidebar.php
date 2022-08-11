@@ -56,7 +56,7 @@
                <a href="#" class="nav-link <?php echo activate_menu('drivers');?> <?php echo activate_menu('adddrivers');?><?php echo activate_menu('editdriver');?>">
                   <i class="nav-icon fas fa-user-secret"></i>
                   <p>
-                     Driver's
+                     Supir
                      <i class="right fas fa-angle-left"></i>
                   </p>
                </a>
@@ -65,14 +65,14 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>drivers" class="nav-link <?php echo activate_menu('drivers');?><?php echo activate_menu('editdriver');?>">
                         <i class="nav-icon fas faa-list"></i>
-                        <p>Driver List</p>
+                        <p>Manajemen Supir</p>
                      </a>
                   </li>
                   <?php } if(userpermission('lr_drivers_add')) { ?>
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>drivers/adddrivers" class="nav-link <?php echo activate_menu('adddrivers');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Add Driver</p>
+                        <p>Tambah Supir</p>
                      </a>
                   </li>
                   <?php } ?>
@@ -176,7 +176,7 @@
                <a href="#" class="nav-link <?php echo activate_menu('fuel');?> <?php echo activate_menu('addfuel');?><?php echo activate_menu('editfuel');?>">
                   <i class="nav-icon fa fa-battery-three-quarters"></i>
                   <p>
-                     Fuel
+                     Bensin
                      <i class="right fas fa-angle-left"></i>
                   </p>
                </a>
@@ -185,14 +185,14 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>fuel" class="nav-link <?php echo activate_menu('fuel');?> <?php echo activate_menu('editfuel');?>">
                         <i class="nav-icon fas faa-list"></i>
-                        <p>Fuel Management</p>
+                        <p>Manajemen Bensin</p>
                      </a>
                   </li>
                    <?php } if(userpermission('lr_fuel_add')) { ?>
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>fuel/addfuel" class="nav-link <?php echo activate_menu('addfuel');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Add Fuel</p>
+                        <p>Tambah Bensin</p>
                      </a>
                   </li>
                    <?php } ?>
@@ -248,7 +248,7 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>incomexpense/addincomexpense" class="nav-link <?php echo activate_menu('addincomexpense');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Add Income & Expenses</p>
+                        <p>Tambah Income & Expenses</p>
                      </a>
                   </li>
                   <?php } ?>

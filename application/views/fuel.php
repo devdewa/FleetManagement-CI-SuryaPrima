@@ -2,13 +2,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Fuel Info
+            <h1 class="m-0 text-dark">Manajemen Bensin
             </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Dashboard</a></li>
-              <li class="breadcrumb-item active">Fuel Info</li>
+              <li class="breadcrumb-item active">Manajemen Bensin</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -23,14 +23,14 @@
                     <table id="fueltbl" class="table card-table">
                       <thead>
                         <tr>
-                          <th class="w-1">S.No</th>
-                           <th>Fuel Fill Date</th>
-                          <th>Vechicle</th>
-                          <th>Quantity</th>
-                          <th>Fuel Total Price</th>
-                          <th>Fuel Filled By</th>
-                           <th>Odometer Reading</th>
-                          <th>Comments</th>
+                          <th class="w-1">No</th>
+                          <th>Tanggal isi BBM</th>
+                          <th>Kendaraan</th>
+                          <th>Jumlah liter</th>
+                          <th>Jumlah RP.</th>
+                          <th>Driver</th>
+                          <th>KM Pengiriman</th>
+                          <th>Jenis BBM</th>
                           <?php if(userpermission('lr_fuel_edit')) { ?>
                           <th>Action</th>
                           <?php } ?>

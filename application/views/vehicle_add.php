@@ -25,15 +25,15 @@
                     <input type="hidden" name="v_id" id="v_id" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_id']:'' ?>" >
 
                     <div class="col-sm-6 col-md-4">
-                        <label class="form-label">No. Plat Kendaraan</label>
+                        <label class="form-label">No. PLAT Kendaraan</label>
                       <div class="form-group">
-                        <input type="text" name="v_registration_no" id="v_registration_no" class="form-control" placeholder="No. Plat Kendaraan" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_registration_no']:'' ?>">
+                        <input type="text" name="v_registration_no" id="v_registration_no" class="form-control" placeholder="No. PLAT Kendaraan" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_registration_no']:'' ?>">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
-                        <label class="form-label">Merk Kendaraan</label>
+                        <label class="form-label">Merek Kendaraan</label>
                       <div class="form-group">
-                        <input type="text" name="v_name" id="v_name" class="form-control" placeholder="Merk Kendaraan" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_name']:'' ?>">
+                        <input type="text" name="v_name" id="v_name" class="form-control" placeholder="Merek Kendaraan" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_name']:'' ?>">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -169,7 +169,7 @@
                   <input type="hidden" id="v_created_by" name="v_created_by" value="<?php echo output($this->session->userdata['session_data']['u_id']); ?>">
                    <input type="hidden" id="v_created_date" name="v_created_date" value="<?php echo date('Y-m-d h:i:s'); ?>">
                 <div class="card-footer text-right">
-                  <button type="submit" class="btn btn-primary"> <?php echo (isset($vehicledetails))?'Update Vehicle':'Add Vehicle' ?></button>
+                  <button type="submit" class="btn btn-primary"> <?php echo (isset($vehicledetails))?'Update Vehicle':'Submit' ?></button>
                 </div>
               </form>
              </div>
