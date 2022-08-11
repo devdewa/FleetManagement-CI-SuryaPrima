@@ -342,7 +342,7 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>reports/fuels" class="nav-link <?php echo activate_menu('fuels');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Fuel</p>
+                        <p>Bensin</p>
                      </a>
                   </li>
                </ul>
@@ -389,13 +389,13 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>users" class="nav-link <?php echo activate_menu('users');?> <?php echo activate_menu('edituser');?>">
                         <i class="fas fa-cosg icon nav-icon"></i>
-                        <p>User Management</p>
+                        <p>Manajemen User</p>
                      </a>
                   </li>
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>users/adduser" class="nav-link <?php echo activate_menu('adduser');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Add User</p>
+                        <p>Tambah User</p>
                      </a>
                   </li>
                </ul>

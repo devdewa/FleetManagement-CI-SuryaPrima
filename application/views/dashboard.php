@@ -27,7 +27,7 @@
             <div class="info-box">
                <span class="info-box-icon theme-bg-default elevation-1"><i class="fas fa-truck text-white"></i></span>
                <div class="info-box-content">
-                  <span class="info-box-text">Total Vehicle's</span>
+                  <span class="info-box-text">Total Kendaraan</span>
                   <span class="info-box-number"><?= ($dashboard['tot_vehicles']!='') ? $dashboard['tot_vehicles']:'0' ?>  </span>
                </div>
                <!-- /.info-box-content -->
@@ -39,7 +39,7 @@
             <div class="info-box mb-3">
                <span class="info-box-icon bg-success elevation-1"><i class="fa fa-user-secret"></i></span>
                <div class="info-box-content">
-                  <span class="info-box-text">Total Drivers</span>
+                  <span class="info-box-text">Total Supir</span>
                   <span class="info-box-number"><?= ($dashboard['tot_drivers']!='') ? $dashboard['tot_drivers']:'0' ?> </span>
                </div>
                <!-- /.info-box-content -->
@@ -157,7 +157,7 @@
          <div class="col-sm-6 col-lg-6 ">
             <div class="card ">
                <div class="card-header">
-                  <h2 class="card-title">Vechicle Current Location</h2>
+                  <h2 class="card-title">Kendaraan Current Location</h2>
                </div>
                <table  class="datatable table card-table table-vcenter">
                   <thead>
@@ -183,7 +183,7 @@
          <div class="col-sm-6 col-lg-6 ">
             <div class="card">
                <div class="card-header">
-                  <h2 class="card-title">Vechicle Running Status</h2>
+                  <h2 class="card-title">Kendaraan Running Status</h2>
                </div>
                <table class="datatable table card-table">
                   <thead>
@@ -210,12 +210,12 @@
             <div class="col-sm-12 col-lg-12 ">
                <div class="card">
                   <div class="card-header">
-                     <h2 class="card-title">Vehicle Geofence Status</h2>
+                     <h2 class="card-title">Kendaraan Geofence Status</h2>
                   </div>
                   <table class="datatable table card-table table-vcenter">
                      <thead>
                         <tr>
-                           <th>Vehicle</th>
+                           <th>Kendaraan</th>
                            <th>Event</th>
                            <th>Time</th>
                         </tr>

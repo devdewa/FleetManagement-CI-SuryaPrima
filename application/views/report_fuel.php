@@ -2,14 +2,14 @@
    <div class="container-fluid">
       <div class="row mb-2">
          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Fuel Report
+            <h1 class="m-0 text-dark">Bensin Report
             </h1>
          </div>
          <!-- /.col -->
          <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                <li class="breadcrumb-item"><a href="<?= base_url(); ?>reports">Report</a></li>
-               <li class="breadcrumb-item active">Fuel Report</li>
+               <li class="breadcrumb-item active">Bensin Report</li>
             </ol>
          </div>
          <!-- /.col -->
@@ -42,10 +42,10 @@
                </div>
                <div class="col-md-4">
                   <div class="form-group row">
-                     <label for="booking_to" class="col-sm-3 col-form-label">Vehicle</label>
+                     <label for="booking_to" class="col-sm-4 col-form-label">Kendaraan</label>
                      <div class="col-sm-8 form-group">
                         <select required="true" id="fuel_vechicle"  class="form-control selectized"  name="fuel_vechicle">
-                           <option value="all">All Vechicle</option>
+                           <option value="all">All Kendaraan</option>
                            <?php foreach ($vehiclelist as $key => $vechiclelists) { ?>
                            <option <?php echo (isset($_POST['booking_vechicle']) && ($_POST['booking_vechicle'] == $vechiclelists['v_id'])) ? 'selected':'' ?> value="<?php echo output($vechiclelists['v_id']) ?>"><?php echo output($vechiclelists['v_name']).' - '. output($vechiclelists['v_registration_no']); ?></option>
                            <?php  } ?>
@@ -68,14 +68,14 @@
                    <table  class="datatableexport table card-table">
                       <thead>
                         <tr>
-                          <th class="w-1">S.No</th>
-                           <th>Fuel Fill Date</th>
-                          <th>Vechicle</th>
-                          <th>Quantity</th>
-                          <th>Fuel Total Price</th>
-                          <th>Fuel Filled By</th>
-                           <th>Odometer Reading</th>
-                          <th>Comments</th>
+                           <th class="w-1">No</th>
+                           <th>Tanggal isi BBM</th>
+                           <th>Kendaraan</th>
+                           <th>Jumlah liter</th>
+                           <th>Jumlah Rp.</th>
+                           <th>Supir</th>
+                           <th>KM Pengiriman</th>
+                           <th>Jenis BBM</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -84,7 +84,7 @@
                            ?>
                         <tr>
                            <td> <?php echo output($count); $count++; ?></td>
-                            <td> <?php echo output($fuels['v_fuelfilldate']); ?></td>
+                           <td> <?php echo output($fuels['v_fuelfilldate']); ?></td>
                            <td> <?php echo output($fuels['vech_name']->v_name); ?></td>
                            <td> <?php echo output($fuels['v_fuel_quantity']); ?></td>
                            <td><?php echo output($fuels['v_fuelprice']); ?></td>
