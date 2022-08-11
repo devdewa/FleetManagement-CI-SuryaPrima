@@ -2,13 +2,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"><?php echo (isset($userdetails))?'Edit User':'Add User' ?>
+            <h1 class="m-0 text-dark"><?php echo (isset($userdetails))?'Edit User':'Tambah User' ?>
             </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">User</a></li>
-              <li class="breadcrumb-item active"><?php echo (isset($userdetails))?'Edit User':'Add User' ?></li>
+              <li class="breadcrumb-item active"><?php echo (isset($userdetails))?'Edit User':'Tambah User' ?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,9 +25,9 @@
                    <input type="hidden" name="basic[u_id]" id="u_id"  value="<?php echo (isset($userdetails)) ? $userdetails[0]['u_id']:'' ?>" >
 
                     <div class="col-sm-6 col-md-4">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">Nama Lengkap</label>
                       <div class="form-group">
-                        <input type="text" name="basic[u_name]" id="u_name" required="true" class="form-control" placeholder="Name" value="<?php echo (isset($userdetails)) ? $userdetails[0]['u_name']:'' ?>">
+                        <input type="text" name="basic[u_name]" id="u_name" required="true" class="form-control" placeholder="Nama" value="<?php echo (isset($userdetails)) ? $userdetails[0]['u_name']:'' ?>">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
@@ -37,7 +37,7 @@
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
-                        <label class="form-label">User Name</label>
+                        <label class="form-label">Nama Panggilan</label>
                       <div class="form-group">
                         <input type="text" name="basic[u_username]" id="u_username" required="true" class="form-control" placeholder="User Name" value="<?php echo (isset($userdetails)) ? $userdetails[0]['u_username']:'' ?>">
                       </div>
@@ -69,7 +69,7 @@
                     <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
-                          <label class="form-label">Vehicle</label>
+                          <label class="form-label">Kendaraan</label>
                         </div>
                       </div>
                       <div class="form-group mr-4">
@@ -101,7 +101,7 @@
                   <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
-                          <label class="form-label">Vehicle Group</label>
+                          <label class="form-label">Grup Kendaraan (Gudang)</label>
                         </div>
                       </div>
                       <div class="form-group mr-4">
@@ -127,7 +127,7 @@
                     <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
-                          <label class="form-label">Driver</label>
+                          <label class="form-label">Supir</label>
                         </div>
                       </div>
                       <div class="form-group mr-4">
@@ -203,10 +203,36 @@
                       </div>
                   </div>
 
+                  <!-- <div class="row">
+                      <div class="col-sm-6 col-md-2">
+                        <div class="form-group">
+                          <label class="form-label">Supplier</label>
+                        </div>
+                      </div>
+                      <div class="form-group mr-4">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" value="1" <?php if(isset($userdetails[0]['lr_vech_list'])) { echo ($userdetails[0]['lr_cust_list']==1 ? 'checked' : ''); } ?> name="permissions[lr_cust_list]" class="custom-control-input" id="lr_cust_list">
+                          <label class="custom-control-label" for="lr_cust_list">All List</label>
+                        </div>
+                      </div>
+                      <div class="form-group mr-4">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" value="1" <?php if(isset($userdetails[0]['lr_vech_list'])) { echo ($userdetails[0]['lr_cust_edit']==1 ? 'checked' : ''); } ?> name="permissions[lr_cust_edit]" class="custom-control-input" id="lr_cust_edit">
+                          <label class="custom-control-label" for="lr_cust_edit">Edit</label>
+                        </div>
+                      </div>
+                       <div class="form-group mr-4">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" value="1" <?php if(isset($userdetails[0]['lr_vech_list'])) { echo ($userdetails[0]['lr_cust_add']==1 ? 'checked' : ''); } ?> name="permissions[lr_cust_add]" class="custom-control-input" id="lr_cust_add">
+                          <label class="custom-control-label" for="lr_cust_add">Add New</label>
+                        </div>
+                      </div>
+                  </div> -->
+
                   <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
-                          <label class="form-label">Fuel</label>
+                          <label class="form-label">Bensin</label>
                         </div>
                       </div>
                       <div class="form-group mr-4">

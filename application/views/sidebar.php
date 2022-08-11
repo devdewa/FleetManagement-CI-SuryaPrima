@@ -381,7 +381,7 @@
                <a href="#" class="nav-link <?php echo activate_menu('users');?> <?php echo activate_menu('edituser');?><?php echo activate_menu('adduser');?>">
                   <i class="nav-icon fa fa-user"></i>
                   <p>
-                     User's
+                     User
                      <i class="right fas fa-angle-left"></i>
                   </p>
                </a>

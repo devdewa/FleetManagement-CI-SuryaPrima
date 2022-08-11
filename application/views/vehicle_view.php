@@ -160,10 +160,10 @@
                                     #
                                   </th>
                                   <th class="percent25">
-                                    Name
+                                    Nama
                                   </th>
                                   <th class="percent25">
-                                    Description
+                                    Deskripsi
                                   </th>
                                   <th class="percent25">
                                     Action
@@ -203,19 +203,19 @@
                                     #
                                   </th>
                                   <th class="percent25">
-                                    Date
+                                    Tanggal
                                   </th>
                                   <th class="percent25">
-                                    Description
+                                    Deskripsi
                                   </th>
                                   <th class="percent25">
-                                    Amount
+                                    Jumlah biaya
                                   </th>
                                   <th class="percent25">
-                                    Store
+                                    Tempat / Supplier
                                   </th>
                                   <th class="percent25">
-                                    Type
+                                    Jenis Transaksi
                                   </th>
                                   <th class="percent25">
                                     Action
@@ -264,43 +264,43 @@
                     <table class="table table-sm table-bordered">
                   <tbody>
                     <tr>
-                      <td>Registration No</td>
+                      <td>No. PLAT Kendaraan</td>
                       <td><?= output($vehicledetails['v_registration_no']) ?></td>
                     </tr>
                     <tr>
-                      <td>Name</td>
+                      <td>Merk Kendaraan</td>
                       <td><?= output($vehicledetails['v_name']) ?></td>
                     </tr>
                     <tr>
-                      <td>Model</td>
+                      <td>Model & Tipe</td>
                       <td><?= output($vehicledetails['v_model']) ?></td>
                     </tr>
                     <tr>
-                      <td>Assembly Year</td>
+                      <td>Tahun Pembuatan</td>
                       <td><?= output($vehicledetails['v_assembly']) ?></td>
                     </tr>
                     <tr>
-                      <td>Police Plate</td>
+                      <td>Masa berlaku PLAT</td>
                       <td><?= output($vehicledetails['v_plate']) ?> | <span class="text-danger"><?= output($vehicledetails['v_plate_reminder']) ?></span></td>
                     </tr>
                     <tr>
-                      <td>Tax Date</td>
+                      <td>Masa berlaku STNK</td>
                       <td><?= output($vehicledetails['v_tax']) ?> | <span class="text-danger"><?= output($vehicledetails['v_tax_reminder']) ?></span></td>
                     </tr>
                     <tr>
-                      <td>KIR</td>
+                      <td>Masa berlaku KIR</td>
                       <td><?= output($vehicledetails['v_kir']) ?> | <span class="text-danger"><?= output($vehicledetails['v_kir_reminder']) ?></span></td>
                     </tr>
                     <tr>
-                      <td>Engine No.</td>
+                      <td>No. Mesin</td>
                       <td><?= output($vehicledetails['v_engine_no']) ?></td>
                     </tr>
                     <tr>
-                      <td>Manufactured By</td>
+                      <td>KTP Pemilik</td>
                       <td><?= output($vehicledetails['v_manufactured_by']) ?></td>
                     </tr>
                      <tr>
-                      <td>Type</td>
+                      <td>Tipe Kendaraan</td>
                       <td><?= output($vehicledetails['v_type']) ?></td>
                     </tr>
                      <tr>
