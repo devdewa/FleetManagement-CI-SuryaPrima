@@ -2,13 +2,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"><?php echo (isset($supplierdetails))?'Edit Supplier':'Add Supplier' ?>
+            <h1 class="m-0 text-dark"><?php echo (isset($supplierdetails))?'Edit Supplier':'Tambah Supplier' ?>
             </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Supplier</a></li>
-              <li class="breadcrumb-item active"><?php echo (isset($supplierdetails))?'Edit Supplier':'Add Supplier' ?></li>
+              <li class="breadcrumb-item active"><?php echo (isset($supplierdetails))?'Edit Supplier':'Tambah Supplier' ?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,20 +25,20 @@
 
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                          <label class="form-label">Name<span class="form-required">*</span></label>
-                          <input type="text" required="true" class="form-control" value="<?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_name']:'' ?>" id="s_name" name="s_name" placeholder="supplier Name">
+                          <label class="form-label">Nama<span class="form-required">*</span></label>
+                          <input type="text" required="true" class="form-control" value="<?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_name']:'' ?>" id="s_name" name="s_name" placeholder="Nama Supplier">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                         <label class="form-label">Mobile<span class="form-required">*</span></label>
-                          <input type="text" required="true" class="form-control" value="<?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_mobile']:'' ?>" id="s_mobile" name="s_mobile" placeholder="supplier Mobile">
+                         <label class="form-label">No Telepon<span class="form-required">*</span></label>
+                          <input type="text" required="true" class="form-control" value="<?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_mobile']:'' ?>" id="s_mobile" name="s_mobile" placeholder="No Telepon Supplier">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                       <div class="form-group">
                          <label class="form-label">Email</label>
-                          <input type="text" required="true" class="form-control" value="<?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_email']:'' ?>" id="s_email" name="s_email" placeholder="supplier Email">
+                          <input type="text" required="true" class="form-control" value="<?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_email']:'' ?>" id="s_email" name="s_email" placeholder="Email Supplier">
 
                       </div>
                     </div>
@@ -57,8 +57,8 @@
 
                     <div class="col-sm-6 col-md-6">
                       <div class="form-group">
-                       <label class="form-label">Address<span class="form-required">*</span></label>
-                        <textarea class="form-control" required="true" id="s_address" autocomplete="off" placeholder="Address"  name="s_address"><?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_address']:'' ?></textarea>
+                       <label class="form-label">Alamat<span class="form-required">*</span></label>
+                        <textarea class="form-control" required="true" id="s_address" autocomplete="off" placeholder="Alamat"  name="s_address"><?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_address']:'' ?></textarea>
                       </div>
                     </div>
                    
