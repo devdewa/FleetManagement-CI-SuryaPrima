@@ -1,16 +1,14 @@
- 
-      
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Vehicle Details
+            <h1 class="m-0 text-dark">Detail Kendaraan
             </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Vehicle Details</li>
+              <li class="breadcrumb-item active">Detail Kendaraan</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -45,7 +43,7 @@
                     <b>Geofence</b> <a class="float-right"><?= count($vechicle_geofence); ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Notifications</b> <a class="float-right"><?= count($geofence_events); ?></a>
+                    <b>Notifikasi</b> <a class="float-right"><?= count($geofence_events); ?></a>
                   </li>
                 </ul>
 
@@ -320,11 +318,11 @@
                       <td><?= output($vehicledetails['v_api_password']) ?></td>
                     </tr>
                      <tr>
-                      <td>Created Date</td>
+                      <td>Tanggal Dibuat</td>
                       <td><?= output($vehicledetails['v_created_date']) ?></td>
                     </tr>
                      <tr>
-                      <td>Modified Date</td>
+                      <td>Tanggal Dimodifikasi</td>
                       <td><?= output($vehicledetails['v_modified_date']) ?></td>
                     </tr>
                   </tbody>
