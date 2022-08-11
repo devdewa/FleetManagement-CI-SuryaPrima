@@ -21,7 +21,7 @@
                <a href="#" class="nav-link <?php echo activate_menu('vehicle');?> <?php echo activate_menu('addvehicle');?><?php echo activate_menu('viewvehicle');?><?php echo activate_menu('editvehicle');?><?php echo activate_menu('vehiclegroup');?>">
                   <i class="nav-icon fas fa-truck"></i>
                   <p>
-                     Vehicle's
+                     Kendaraan
                      <i class="right fas fa-angle-left"></i>
                   </p>
                </a>
@@ -30,21 +30,21 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>vehicle" class="nav-link <?php echo activate_menu('vehicle');?><?php echo activate_menu('editvehicle');?><?php echo activate_menu('viewvehicle');?>">
                         <i class="nav-icon fas faa-list"></i>
-                        <p>Vehicle List</p>
+                        <p>List Kendaraan</p>
                      </a>
                   </li>
                  <?php } if(userpermission('lr_vech_add')) { ?>
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>vehicle/addvehicle" class="nav-link <?php echo activate_menu('addvehicle');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Add Vehicle</p>
+                        <p>Tambah Kendaraan</p>
                      </a>
                   </li>
                   <?php } if(userpermission('lr_vech_group')) { ?>
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>vehicle/vehiclegroup" class="nav-link <?php echo activate_menu('vehiclegroup');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Vehicle Group</p>
+                        <p>Grup Kendaraan (Gudang)</p>
                      </a>
                   </li>
                 <?php } ?>

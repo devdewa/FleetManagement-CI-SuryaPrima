@@ -2,13 +2,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"><?php echo (isset($vehicledetails))?'Edit Vehicle':'Add Vehicle' ?>
+            <h1 class="m-0 text-dark"><?php echo (isset($vehicledetails))?'Edit Kendaraan':'Add Kendaraan' ?>
             </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Vehicle</a></li>
-              <li class="breadcrumb-item active"><?php echo (isset($vehicledetails))?'Edit vehicle':'Add Vehicle' ?></li>
+              <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Kendaraan</a></li>
+              <li class="breadcrumb-item active"><?php echo (isset($vehicledetails))?'Edit Kendaraan':'Add Kendaraan' ?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,39 +25,39 @@
                     <input type="hidden" name="v_id" id="v_id" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_id']:'' ?>" >
 
                     <div class="col-sm-6 col-md-4">
-                        <label class="form-label">Registration Number</label>
+                        <label class="form-label">No. Plat Kendaraan</label>
                       <div class="form-group">
-                        <input type="text" name="v_registration_no" id="v_registration_no" class="form-control" placeholder="Registration Number" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_registration_no']:'' ?>">
+                        <input type="text" name="v_registration_no" id="v_registration_no" class="form-control" placeholder="No. Plat Kendaraan" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_registration_no']:'' ?>">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
-                        <label class="form-label">Vehicle Name</label>
+                        <label class="form-label">Merk Kendaraan</label>
                       <div class="form-group">
-                        <input type="text" name="v_name" id="v_name" class="form-control" placeholder="Vehicle Name" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_name']:'' ?>">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4">
-                      <div class="form-group">
-                        <label class="form-label">Model</label>
-                        <input type="text" name="v_model" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_model']:'' ?>" class="form-control" placeholder="Model">
+                        <input type="text" name="v_name" id="v_name" class="form-control" placeholder="Merk Kendaraan" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_name']:'' ?>">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label class="form-label">Engine No</label>
-                        <input type="text" name="v_engine_no" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_engine_no']:'' ?>" class="form-control" placeholder="Engine No">
+                        <label class="form-label">Model & Tipe</label>
+                        <input type="text" name="v_model" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_model']:'' ?>" class="form-control" placeholder="Model & Tipe">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label class="form-label">Manufactured By</label>
-                        <input type="text" name="v_manufactured_by" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_manufactured_by']:'' ?>" class="form-control" placeholder="Manufactured By">
+                        <label class="form-label">No. Mesin</label>
+                        <input type="text" name="v_engine_no" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_engine_no']:'' ?>" class="form-control" placeholder="No. Mesin">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label class="form-label">Assembly Year</label>
-                          <input type="text" name="v_assembly" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_assembly']:'' ?>" class="form-control datepicker" placeholder="Aseembly Year Date">
+                        <label class="form-label">KTP Pemilik</label>
+                        <input type="text" name="v_manufactured_by" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_manufactured_by']:'' ?>" class="form-control" placeholder="KTP Pemilik">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="form-group">
+                        <label class="form-label">Tahun Pembuatan</label>
+                          <input type="text" name="v_assembly" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_assembly']:'' ?>" class="form-control datepicker" placeholder="Tahun Pembuatan">
                       </div>
                     </div>
                   </div>
@@ -65,23 +65,21 @@
                   <div class="row">
                      <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label class="form-label">Vehicle Type</label>
+                        <label class="form-label">Tipe Kendaraan</label>
                         <select id="v_type" name="v_type" class="form-control " required="">
-                         <option value="">Select Vehicle Type</option> 
-                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='CAR') ? 'selected':'' ?> value="CAR">CAR</option> 
-                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='MOTORCYCLE') ? 'selected':'' ?> value="MOTORCYCLE">MOTORCYCLE</option> 
-                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='TRUCK') ? 'selected':'' ?> value="TRUCK">TRUCK</option> 
-                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='BUS') ? 'selected':'' ?> value="BUS">BUS</option> 
-                           <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='TAXI') ? 'selected':'' ?> value="TAXI">TAXI</option> 
-                           <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='BICYCLE') ? 'selected':'' ?> value="BICYCLE">BICYCLE</option> 
+                         <option value="">Pilih Tipe Kendaraan</option> 
+                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='Mobil') ? 'selected':'' ?> value="Mobil">Mobil</option> 
+                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='Motor') ? 'selected':'' ?> value="Motor">Motor</option> 
+                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='Truk') ? 'selected':'' ?> value="Truk">Truk</option> 
+                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='Pick Up') ? 'selected':'' ?> value="Pick Up">Pick Up</option> 
+                          <option <?php echo (isset($vehicledetails) && $vehicledetails[0]['v_type']=='Box') ? 'selected':'' ?> value="Box">Box</option> 
                         </select>
-
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label for="v_color" class="form-label">Vehicle Color<small> (To show in Map)</small></label>
-                        <input id="add-device-color" name="v_color" class="jscolor {valueElement:'add-device-color', styleElement:'add-device-color', hash:true, mode:'HSV'} form-control"  value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_color']:'#F399EB' ?>" required>
+                        <label for="v_color" class="form-label">Warna Kendaraan<small> (To show in Map)</small></label>
+                        <input id="add-device-color" name="v_color" class="jscolor {valueElement:'add-device-color', styleElement:'add-device-color', hash:true, mode:'HSV'} form-control"  value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_color']:'#000000' ?>" required>
                       </div>
                     </div>
                     <!-- <?php if(isset($vehicledetails[0]['v_is_active'])) { ?>
@@ -98,51 +96,52 @@
                   <?php } ?> -->
                   <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label class="form-label">Status</label>
-                        <input type="text" required="" name="v_is_active" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_is_active']:'' ?>" class="form-control" placeholder="Status">
+                        <label class="form-label">Keterangan Tambahan</label>
+                        <input type="text" required="" name="v_is_active" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_is_active']:'' ?>" class="form-control" placeholder="Keterangan Tambahan">
                       </div>
                   </div>
                   <div class="col-sm-6 col-md-4">
                     <div class="form-group">
                       <div class="d-flex">
-                        <label class="form-label mr-1 mb-0">Police Plate | </label>
+                        <label class="form-label mr-1 mb-0">Masa berlaku PLAT | </label>
                         <label class="form-label p-0 mb-0" for="plate_reminder"><i class="fas fa-bell"></i></label>
                         <input type="text" name="v_plate_reminder" id="plate_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_plate_reminder']:'' ?>" class="form-control p-0 datepickerpastdisable w-50 pl-2 border-0 text-danger">
                       </div>
-                      <input type="text" name="v_plate" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir']:'' ?>" class="form-control datepicker mt-1" placeholder="Police Plate">
+                      <input type="text" name="v_plate" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir']:'' ?>" class="form-control datepicker mt-1" placeholder="Masa berlaku PLAT">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4">
+                    <div class="form-group">
+                      <div class="d-flex">
+                        <label class="form-label mr-1 mb-0">Masa berlaku STNK | </label>
+                        <label class="form-label p-0 mb-0" for="tax_reminder"><i class="fas fa-bell"></i></label>
+                        <input type="text" name="v_tax_reminder" id="tax_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax_reminder']:'' ?>" class="form-control p-0 datepickerpastdisable w-50 pl-2 border-0 text-danger">
+                      </div>
+                      <input type="text" name="v_tax" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax']:'' ?>" class="form-control datepicker mt-1" placeholder="Masa berlaku STNK">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-4">
+                    <div class="form-group">
+                      <div class="d-flex">
+                        <label class="form-label mr-1 mb-0">Masa berlaku KIR | </label>
+                        <label class="form-label p-0 mb-0" for="kir_reminder"><i class="fas fa-bell"></i></label>
+                        <input type="text" name="v_kir_reminder" id="kir_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir_reminder']:'' ?>" class="form-control p-0 datepickerpastdisable w-50 pl-2 border-0 text-danger">
+                      </div>
+                      <input type="text" name="v_kir" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir']:'' ?>" class="form-control datepicker mt-1" placeholder="Masa berlaku KIR">
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label for="v_group" class="form-label">Vehicle Group</label>
+                        <label for="v_group" class="form-label">Lokasi Kendaraan</label>
                         <select id="v_group" name="v_group" class="form-control " required="">
-                          <option value="">Select Vehicle Group</option> 
+                          <option value="">Pilih Lokasi Kendaraan</option> 
                           <?php if(!empty($v_group)) { foreach($v_group as $v_groupdata) { ?>
                           <option <?= (isset($vehicledetails[0]['v_group']) && $vehicledetails[0]['v_group'] == $v_groupdata['gr_id'])?'selected':''?> value="<?= $v_groupdata['gr_id'] ?>"><?= $v_groupdata['gr_name'] ?></option> 
                           <?php } } ?>
                         </select>
                       </div>
                   </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-group">
-                      <div class="d-flex">
-                        <label class="form-label mr-1 mb-0">Tax Date | </label>
-                        <label class="form-label p-0 mb-0" for="tax_reminder"><i class="fas fa-bell"></i></label>
-                        <input type="text" name="v_tax_reminder" id="tax_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax_reminder']:'' ?>" class="form-control p-0 datepickerpastdisable w-50 pl-2 border-0 text-danger">
-                      </div>
-                      <input type="text" name="v_tax" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_tax']:'' ?>" class="form-control datepicker mt-1" placeholder="Tax Date">
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="form-group">
-                      <div class="d-flex">
-                        <label class="form-label mr-1 mb-0">KIR | </label>
-                        <label class="form-label p-0 mb-0" for="kir_reminder"><i class="fas fa-bell"></i></label>
-                        <input type="text" name="v_kir_reminder" id="kir_reminder" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir_reminder']:'' ?>" class="form-control p-0 datepickerpastdisable w-50 pl-2 border-0 text-danger">
-                      </div>
-                      <input type="text" name="v_kir" value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_kir']:'' ?>" class="form-control datepicker mt-1" placeholder="KIR">
-                    </div>
-                  </div>
+
                     </div>
                     <hr>
                     <div class="form-label"><b>GPS API Details(Feed GPS Data)</b></div>
