@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 11, 2022 at 11:04 AM
+-- Generation Time: Aug 13, 2022 at 04:47 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -347,7 +347,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`s_id`, `s_companyname`, `s_address`, `s_inovice_prefix`, `s_logo`, `s_price_prefix`, `s_inovice_termsandcondition`, `s_inovice_servicename`, `s_googel_api_key`) VALUES
-(1, 'VMS', '19/14,First Street,Chennai-1000', 'TEST', 'sitelogo.jpg', '$ ', 'Sample invoice terms and condition..Please change it in settings page............                                                                                                                                                                               ', 'Vehicle Booking', 'AIzaSyA1tT5eHsRh7kbZDzebF-lfVzVgSX8zpLg');
+(1, 'Fleet Management', '19/14,First Street,Chennai-1000', 'TEST', 'sitelogo.jpg', '$ ', 'Sample invoice terms and condition..Please change it in settings page............                                                                                                                                                                               ', 'Vehicle Booking', 'AIzaSyA1tT5eHsRh7kbZDzebF-lfVzVgSX8zpLg');
 
 -- --------------------------------------------------------
 
