@@ -11,7 +11,7 @@ if($this->config->item('company_name')!=='')
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Log in</title>
+  <title>Login</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -67,7 +67,7 @@ if($this->config->item('company_name')!=='')
     
       <form action="<?= base_url().'login/login_action'; ?>" method="post">
         <div class="input-group mb-3">
-          <input type="text" name="username" required class="form-control" placeholder="Username">
+          <input type="text" name="username" required class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -90,7 +90,7 @@ if($this->config->item('company_name')!=='')
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
           </div>
           <!-- /.col -->
         </div>
