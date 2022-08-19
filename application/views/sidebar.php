@@ -142,7 +142,7 @@
                <li class="nav-item has-treeview <?php echo ((activate_menu('supplier'))=='active') ? 'menu-open':'' ?>
                   <?php echo ((activate_menu('addsupplier'))=='active') ? 'menu-open':'' ?><?php echo ((activate_menu('editsupplier'))=='active') ? 'menu-open':'' ?>">
                   <a href="#" class="nav-link <?php echo activate_menu('supplier');?> <?php echo activate_menu('addsupplier');?><?php echo activate_menu('editsupplier');?>">
-                     <i class="nav-icon fas fa-user"></i>
+                     <i class="nav-icon fa fa-archive"></i>
                      <p>
                         Supplier
                         <i class="right fas fa-angle-left"></i>
@@ -213,14 +213,14 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>reminder" class="nav-link <?php echo activate_menu('reminder');?><?php echo activate_menu('editreminder');?>">
                         <i class="nav-icon fas faa-list"></i>
-                        <p>Reminder Management</p>
+                        <p>Manajemen Reminder</p>
                      </a>
                   </li>
                   <?php } if(userpermission('lr_reminder_add')) { ?>
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>reminder/addreminder" class="nav-link <?php echo activate_menu('addreminder');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Add Reminder</p>
+                        <p>Tambah Reminder</p>
                      </a>
                   </li>
                   <?php } ?>

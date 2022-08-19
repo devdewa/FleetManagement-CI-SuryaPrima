@@ -33,7 +33,7 @@
                         <th>License No</th>
                         <th>License Exp Date</th>
                         <th>Tanggal Bergabung</th>
-                        <th>Is Active</th>
+                        <th>Status</th>
                         <?php if(userpermission('lr_drivers_list_edit')) { ?>
                         <th>Action</th>
                         <?php } ?>
@@ -50,7 +50,7 @@
                         <td><?php echo output($driverslists['d_licenseno']); ?></td>
                         <td><?php echo output($driverslists['d_license_expdate']); ?></td>
                         <td><?php echo output($driverslists['d_doj']); ?></td>
-                        <td>  <span class="badge <?php echo ($driverslists['d_is_active']=='1') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($driverslists['d_is_active']=='1') ? 'Active' : 'Inactive'; ?></span>  </td>
+                        <td>  <span class="badge <?php echo ($driverslists['d_is_active']=='1') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($driverslists['d_is_active']=='1') ? 'Aktif' : 'Tidak Aktif'; ?></span>  </td>
                         <?php if(userpermission('lr_drivers_list_edit')) { ?>
                         <td>
                            <a class="icon" href="<?php echo base_url(); ?>drivers/editdriver/<?php echo output($driverslists['d_id']); ?>">

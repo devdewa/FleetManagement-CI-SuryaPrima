@@ -2,13 +2,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"><?php echo (isset($driverdetails))?'Edit driver':'Add driver' ?>
+            <h1 class="m-0 text-dark"><?php echo (isset($driverdetails))?'Edit driver':'Tambah Supir' ?>
             </h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>/dashboard">Vehicle</a></li>
-              <li class="breadcrumb-item active"><?php echo (isset($driverdetails))?'Edit driver':'Add driver' ?></li>
+              <li class="breadcrumb-item active"><?php echo (isset($driverdetails))?'Edit driver':'Tambah Supir' ?></li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,21 +25,21 @@
                    <input type="hidden" name="d_id" id="d_id" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_id']:'' ?>" >
 
                     <div class="col-sm-6 col-md-3">
-                        <label class="form-label">Driver Name<span class="form-required">*</span></label>
+                        <label class="form-label">Nama Supir<span class="form-required">*</span></label>
                       <div class="form-group">
-                        <input type="text" name="d_name" id="d_name" class="form-control" placeholder="Driver Name" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_name']:'' ?>" >
+                        <input type="text" name="d_name" id="d_name" class="form-control" placeholder="Nama Supir" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_name']:'' ?>" >
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                        <label class="form-label">Mobile<span class="form-required">*</span></label>
-                        <input type="text" name="d_mobile" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_mobile']:'' ?>" class="form-control" placeholder="Mobile" >
+                        <label class="form-label">No Telepon<span class="form-required">*</span></label>
+                        <input type="text" name="d_mobile" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_mobile']:'' ?>" class="form-control" placeholder="No Telepon" >
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                        <label class="form-label">Age<span class="form-required">*</span></label>
-                        <input type="text" name="d_age" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_age']:'' ?>" class="form-control" placeholder="Age" >
+                        <label class="form-label">Umur<span class="form-required">*</span></label>
+                        <input type="text" name="d_age" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_age']:'' ?>" class="form-control" placeholder="Umur" >
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
@@ -62,30 +62,30 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                        <label class="form-label">Date of Joining<span class="form-required">*</span></label>
-                        <input type="text" name="d_doj" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_doj']:'' ?>" class="form-control datepicker" placeholder="Date of Joining" >
+                        <label class="form-label">Tanggal Bergabung<span class="form-required">*</span></label>
+                        <input type="text" name="d_doj" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_doj']:'' ?>" class="form-control datepicker" placeholder="Tanggal Bergabung" >
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div class="form-group">
-                        <label class="form-label">Reference/Notes</label>
-                        <input type="text" name="d_ref" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_ref']:'' ?>" class="form-control" placeholder="Reference or Notes" >
+                        <label class="form-label">Referensi / Catatan</label>
+                        <input type="text" name="d_ref" value="<?php echo (isset($driverdetails)) ? $driverdetails[0]['d_ref']:'' ?>" class="form-control" placeholder="Referensi / Catatan" >
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
                         <div class="form-group">
-                        <label class="form-label">Address<span class="form-required">*</span></label>
-                        <textarea class="form-control" autocomplete="off" placeholder="Address"  name="d_address"><?php echo (isset($driverdetails)) ? $driverdetails[0]['d_address']:'' ?></textarea>
+                        <label class="form-label">Alamat<span class="form-required">*</span></label>
+                        <textarea class="form-control" autocomplete="off" placeholder="Alamat"  name="d_address"><?php echo (isset($driverdetails)) ? $driverdetails[0]['d_address']:'' ?></textarea>
                         
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                        <label for="d_is_active" class="form-label">Driver Status</label>
+                        <label for="d_is_active" class="form-label">Status Supir</label>
                         <select id="d_is_active" name="d_is_active" class="form-control " required="">
-                          <option value="">Select Driver Status</option> 
-                          <option <?php echo (isset($driverdetails) && $driverdetails[0]['d_is_active']==1) ? 'selected':'' ?> value="1">Active</option> 
-                          <option <?php echo (isset($driverdetails) && $driverdetails[0]['d_is_active']==0) ? 'selected':'' ?> value="0">Inactive</option> 
+                          <option value="">Pilih Status Driver</option> 
+                          <option <?php echo (isset($driverdetails) && $driverdetails[0]['d_is_active']==1) ? 'selected':'' ?> value="1">Aktif</option> 
+                          <option <?php echo (isset($driverdetails) && $driverdetails[0]['d_is_active']==0) ? 'selected':'' ?> value="0">Tidak Aktif</option> 
                         </select>
                       </div>
                     </div>
@@ -101,6 +101,3 @@
              </div>
     </section>
     <!-- /.content -->
-
-
-

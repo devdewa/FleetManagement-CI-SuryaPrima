@@ -23,11 +23,11 @@
                <table id="custtbl" class="table card-table table-vcenter text-nowrap">
                   <thead>
                      <tr>
-                        <th class="w-1">S.No</th>
-                        <th>Name</th>
-                        <th>Mobile</th>
+                        <th class="w-1">No</th>
+                        <th>Nama</th>
+                        <th>No Telepon</th>
                         <th>Email</th>
-                        <th>Address</th>
+                        <th>Alamat</th>
                         <th>Status</th>
                         <?php if(userpermission('lr_cust_edit')) { ?>
                         <th>Action</th>
@@ -45,7 +45,7 @@
                         <td> <?php echo output($customerlists['c_mobile']); ?></td>
                         <td><?php echo output($customerlists['c_email']); ?></td>
                         <td><?php echo output($customerlists['c_address']); ?></td>
-                         <td>  <span class="badge <?php echo ($customerlists['c_isactive']=='1') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($customerlists['c_isactive']=='1') ? 'Active' : 'Inactive'; ?></span>  </td>
+                         <td>  <span class="badge <?php echo ($customerlists['c_isactive']=='1') ? 'badge-success' : 'badge-danger'; ?> "><?php echo ($customerlists['c_isactive']=='1') ? 'Aktif' : 'Tidak Aktif'; ?></span>  </td>
                         <?php if(userpermission('lr_cust_edit')) { ?>
                         <td>
                            <a class="icon" href="<?php echo base_url(); ?>customer/editcustomer/<?php echo output($customerlists['c_id']); ?>">

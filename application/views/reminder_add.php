@@ -28,11 +28,10 @@
     <div class="card-body">
                          <input type="hidden" name="r_id" id="r_id" value="<?php echo (isset($reminderdetails)) ? $reminderdetails[0]['r_id']:'' ?>" >
 
-                  
                   <div class="form-group">
-                     <label class="form-label">Vechicle<span class="form-required">*</span></label>
+                     <label class="form-label">Kendaraan<span class="form-required">*</span></label>
                      <select id="r_v_id"  class="form-control selectized"  name="r_v_id" >
-                        <option value="">Select Vechicle</option>
+                        <option value="">Pilih Kendaraan</option>
                         <?php  foreach ($vechiclelist as $key => $vechiclelists) { ?>
                         <option <?php if((isset($reminderdetails)) && $reminderdetails[0]['r_v_id'] == $vechiclelists['v_id']){ echo 'selected';} ?> value="<?php echo output($vechiclelists['v_id']) ?>"><?php echo output($vechiclelists['v_name']).' - '. output($vechiclelists['v_registration_no']); ?></option>
                         <?php  } ?>
@@ -41,20 +40,20 @@
                   
 
                   <div class="form-group">
-                    <label>Date</label>
-                    <input type="text" class="form-control datepickerpastdisable" required="true" value="" id="r_date" name="r_date" placeholder="Enter Date" autocomplete="off">
+                    <label>Tanggal</label>
+                    <input type="text" class="form-control datepickerpastdisable" required="true" value="" id="r_date" name="r_date" placeholder="Pilih Tanggal" autocomplete="off">
                   </div>
 
 
                    <div class="form-group">
-                    <label>Message</label>
-                   <textarea class="form-control" id="r_message" autocomplete="off" placeholder="Message"  name="r_message"><?php echo (isset($reminderdetails)) ? $reminderdetails[0]['r_message']:'' ?></textarea>
+                    <label>Pesan / Keterangan</label>
+                   <textarea class="form-control" id="r_message" autocomplete="off" placeholder="Tulis Pesan / Keterangan"  name="r_message"><?php echo (isset($reminderdetails)) ? $reminderdetails[0]['r_message']:'' ?></textarea>
                   </div>
 
                
                    <div class="modal-footer">
 
-                  <button type="submit" class="btn btn-primary"> <?php echo (isset($reminderdetails))?'Update reminder':'Add reminder' ?></button>
+                  <button type="submit" class="btn btn-primary"> <?php echo (isset($reminderdetails))?'Update reminder':'Submit' ?></button>
                  </div>
 
                 </div>
