@@ -150,7 +150,7 @@
                       </div>
                   </div>
 
-                  <div class="row">
+                  <!-- <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
                           <label class="form-label">Bookings</label>
@@ -175,7 +175,7 @@
                           <label class="custom-control-label" for="lr_trips_add">Add New</label>
                         </div>
                       </div>
-                  </div>
+                  </div> -->
 
                   <div class="row">
                       <div class="col-sm-6 col-md-2">
@@ -304,7 +304,7 @@
                         </div>
                       </div>
                   </div>
-                  <div class="row">
+                  <!-- <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
                           <label class="form-label">Tracking</label>
@@ -322,8 +322,8 @@
                           <label class="custom-control-label" for="lr_liveloc">Live Location</label>
                         </div>
                       </div>
-                  </div>
-                   <div class="row">
+                  </div> -->
+                   <!-- <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
                           <label class="form-label">Geofence</label>
@@ -353,7 +353,7 @@
                           <label class="custom-control-label" for="lr_geofence_events">Events</label>
                         </div>
                       </div>
-                  </div>
+                  </div> -->
                    <div class="row">
                       <div class="col-sm-6 col-md-2">
                         <div class="form-group">
@@ -388,6 +388,3 @@
              </div>
     </section>
     <!-- /.content -->
-
-
-

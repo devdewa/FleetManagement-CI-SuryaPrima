@@ -80,7 +80,7 @@
             </li>
             <?php } ?>
             <?php if(userpermission('lr_trips_list') || userpermission('lr_trips_list_view')) { ?>
-            <li class="nav-item has-treeview <?php echo ((activate_menu('trips'))=='active') ? 'menu-open':'' ?>
+            <!-- <li class="nav-item has-treeview <?php echo ((activate_menu('trips'))=='active') ? 'menu-open':'' ?>
                <?php echo ((activate_menu('addtrips'))=='active') ? 'menu-open':'' ?><?php echo ((activate_menu('edittrip'))=='active') ? 'menu-open':'' ?><?php echo ((activate_menu('details'))=='active') ? 'menu-open':'' ?>">
                <a href="#" class="nav-link <?php echo activate_menu('trips');?> <?php echo activate_menu('addtrips');?> <?php echo activate_menu('edittrip');?><?php echo activate_menu('details');?>">
                   <i class="nav-icon fas fa-road"></i>
@@ -106,7 +106,7 @@
                   </li>
                   <?php } ?>
                </ul>
-            </li>
+            </li> -->
            <?php } ?>
            <?php if(userpermission('lr_cust_list') || userpermission('lr_cust_add')) { ?>
             <li class="nav-item has-treeview <?php echo ((activate_menu('customer'))=='active') ? 'menu-open':'' ?>
@@ -254,7 +254,7 @@
                   <?php } ?>
                </ul>
             </li>
-            <?php }  if(userpermission('lr_tracking') || userpermission('lr_liveloc')) { ?>
+            <!-- <?php }  if(userpermission('lr_tracking') || userpermission('lr_liveloc')) { ?>
             <li class="nav-item has-treeview <?php echo ((activate_menu('tracking'))=='active') ? 'menu-open':'' ?>
                <?php echo ((activate_menu('livestatus'))=='active') ? 'menu-open':'' ?>">
                <a href="#" class="nav-link <?php echo activate_menu('tracking');?> <?php echo activate_menu('livestatus');?>">
@@ -281,8 +281,8 @@
                   </li>
                   <?php } ?>
                </ul>
-            </li>
-             <?php }  if(userpermission('lr_geofence_add') || userpermission('lr_geofence_list') || userpermission('lr_geofence_events')) { ?>
+            </li> -->
+             <!-- <?php }  if(userpermission('lr_geofence_add') || userpermission('lr_geofence_list') || userpermission('lr_geofence_events')) { ?>
             <li class="nav-item has-treeview <?php echo ((activate_menu('addgeofence'))=='active') ? 'menu-open':'' ?> <?php echo ((activate_menu('geofenceevents'))=='active') ? 'menu-open':'' ?>
                <?php echo ((activate_menu('geofence'))=='active') ? 'menu-open':'' ?>">
                <a href="#" class="nav-link <?php echo activate_menu('geofence');?> <?php echo activate_menu('addgeofence');?> <?php echo activate_menu('geofenceevents');?>">
@@ -316,7 +316,7 @@
                   </li>
                   <?php } ?>
                </ul>
-            </li>
+            </li> -->
           <?php }  if(userpermission('lr_reports')) { ?>
             <li class="nav-item has-treeview <?php echo ((activate_menu('incomeexpense'))=='active') ? 'menu-open':'' ?> <?php echo ((activate_menu('booking'))=='active') ? 'menu-open':'' ?><?php echo ((activate_menu('fuels'))=='active') ? 'menu-open':'' ?>">
                <a href="#" class="nav-link <?php echo activate_menu('booking');?><?php echo activate_menu('fuels');?><?php echo activate_menu('incomeexpense');?>">
@@ -327,12 +327,12 @@
                   </p>
                </a>
                <ul class="nav nav-treeview">
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                      <a href="<?= base_url(); ?>reports/booking" class="nav-link <?php echo activate_menu('booking');?>">
                         <i class="fas fa-cosg icon nav-icon"></i>
                         <p>Bookings</p>
                      </a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>reports/incomeexpense" class="nav-link <?php echo activate_menu('incomeexpense');?>">
                         <i class="nav-icon fas faa-plus"></i>
