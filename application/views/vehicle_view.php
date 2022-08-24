@@ -300,11 +300,11 @@
                       <td>Tipe Kendaraan</td>
                       <td><?= output($vehicledetails['v_type']) ?></td>
                     </tr>
-                     <tr>
+                     <!-- <tr>
                       <td>Mileage/Litre</td>
                       <td><?= output($vehicledetails['v_mileageperlitre']) ?></td>
-                    </tr>
-                     <tr>
+                    </tr> -->
+                     <!-- <tr>
                       <td>API URL</td>
                       <td><?= output($vehicledetails['v_api_url']) ?></td>
                     </tr>
@@ -315,7 +315,7 @@
                      <tr>
                       <td>GPS API Password</td>
                       <td><?= output($vehicledetails['v_api_password']) ?></td>
-                    </tr>
+                    </tr> -->
                      <tr>
                       <td>Tanggal Dibuat</td>
                       <td><?= output($vehicledetails['v_created_date']) ?></td>

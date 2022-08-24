@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                       <div class="form-group">
-                        <label for="v_color" class="form-label">Warna Kendaraan<small> (To show in Map)</small></label>
+                        <label for="v_color" class="form-label">Warna Kendaraan</label>
                         <input id="add-device-color" name="v_color" class="jscolor {valueElement:'add-device-color', styleElement:'add-device-color', hash:true, mode:'HSV'} form-control"  value="<?php echo (isset($vehicledetails)) ? $vehicledetails[0]['v_color']:'#000000' ?>" required>
                       </div>
                     </div>
@@ -143,7 +143,7 @@
                   </div>
 
                     </div>
-                    <hr>
+                    <!-- <hr>
                     <div class="form-label"><b>GPS API Details(Feed GPS Data)</b></div>
                      <div class="row">
                     <div class="col-sm-6 col-md-4">
@@ -165,7 +165,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                   <input type="hidden" id="v_created_by" name="v_created_by" value="<?php echo output($this->session->userdata['session_data']['u_id']); ?>">
                    <input type="hidden" id="v_created_date" name="v_created_date" value="<?php echo date('Y-m-d h:i:s'); ?>">
                 <div class="card-footer text-right">

@@ -61,17 +61,17 @@
             <!-- /.info-box -->
          </div>
          <!-- /.col -->
-         <div class="col-12 col-sm-6 col-md-3">
+         <!-- <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-id-card"></i></span>
                <div class="info-box-content">
                   <span class="info-box-text">Today Trips</span>
                   <span class="info-box-number"><?= ($dashboard['tot_today_trips']!='') ? $dashboard['tot_today_trips']:'0' ?></span>
-               </div>
+               </div> -->
                <!-- /.info-box-content -->
-            </div>
+            <!-- </div> -->
             <!-- /.info-box -->
-         </div>
+         <!-- </div> -->
          <!-- /.col -->
       </div>
       <!-- /.row -->
@@ -79,9 +79,8 @@
       <div class="row">
          <!-- Left col -->
          <div class="row col-md-12">
-            <?php if(userpermission('lr_ie_list')) { ?>
+            <!-- <?php if(userpermission('lr_ie_list')) { ?>
             <div class="col-md-6">
-               <!-- TABLE: LATEST ORDERS -->
                <div class="card">
                   <div class="card-header">
                      <h2 class="card-title">Income and Expenses</h2>
@@ -96,7 +95,7 @@
                               </span>
                            </p>
                         </div>
-                        <!-- /.d-flex -->
+
                         <div class="position-relative mb-4">
                            <div class="chartjs-size-monitor">
                               <div class="chartjs-size-monitor-expand">
@@ -119,7 +118,7 @@
                      </div>
                   </div>
                </div>
-            </div>
+            </div> -->
             <?php } if(userpermission('lr_reminder_list')) { ?>
             <div class="col-md-6">
                <div class="card">
@@ -139,7 +138,7 @@
                            <span class="text">
                               <?= $reminder['r_message']. ' ';  ?>    
                               <div class="tools"> 
-                                 <button type="button" data-id="<?= $reminder['r_id'] ?>" class="todayreminderread btn btn-block btn-outline-primary btn-xs">Mark as Read</button>                 
+                                 <button type="button" data-id="<?= $reminder['r_id'] ?>" class="todayreminderread btn btn-block btn-outline-primary btn-xs ml-2">Mark as Read</button>                 
                               </div>
                            </span>
                         </li>
@@ -148,12 +147,12 @@
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer clearfix">
-                     <a href="<?= base_url() ?>reminder/addreminder"><button type="button" class="btn btn-info float-right"><i class="fas fa-plus"></i> Add Reminder</button></a>
+                     <a href="<?= base_url() ?>reminder/addreminder"><button type="button" class="btn btn-info float-right"><i class="fas fa-plus"></i> Tambah Reminder</button></a>
                   </div>
                </div>
             </div>
          </div>
-         <?php } if(userpermission('lr_liveloc')) { ?>
+         <!-- <?php } if(userpermission('lr_liveloc')) { ?>
          <div class="col-sm-6 col-lg-6 ">
             <div class="card ">
                <div class="card-header">
@@ -178,8 +177,8 @@
                   </tbody>
                </table>
             </div>
-         </div>
-         <?php } if(userpermission('lr_vech_list')) { ?>
+         </div> -->
+         <!-- <?php } if(userpermission('lr_vech_list')) { ?>
          <div class="col-sm-6 col-lg-6 ">
             <div class="card">
                <div class="card-header">
@@ -204,8 +203,8 @@
                      <?php  }   }  ?>
                </table>
             </div>
-         </div>
-         <?php } if(userpermission('lr_geofence_list')) { ?>
+         </div> -->
+         <!-- <?php } if(userpermission('lr_geofence_list')) { ?>
          <div class="col-md-6">
             <div class="col-sm-12 col-lg-12 ">
                <div class="card">
@@ -235,7 +234,7 @@
                </div>
             </div>
          </div>
-         <?php } ?>
+         <?php } ?> -->
       </div>
       <!-- /.card -->
       <!-- /.col -->

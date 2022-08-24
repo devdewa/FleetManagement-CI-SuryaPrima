@@ -76,7 +76,7 @@
                     </div> -->
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                        <label class="form-label">Tempat<span class="form-required">*</span></label>
+                        <label class="form-label">Tempat (Supplier)<span class="form-required">*</span></label>
                         <select name="ie_store" id="ie_store" class="form-control">
                           <option value="">Pilih Tempat</option>
                           <?php  foreach ($supplierlist as $key => $supplierlists) { ?>

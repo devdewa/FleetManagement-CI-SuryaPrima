@@ -123,14 +123,14 @@
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>customer" class="nav-link <?php echo activate_menu('customer');?><?php echo activate_menu('editcustomer');?>">
                         <i class="nav-icon fas faa-list"></i>
-                        <p>Customer Management</p>
+                        <p>Manajemen Customer</p>
                      </a>
                   </li>
                   <?php } if(userpermission('lr_cust_add')) { ?>
                   <li class="nav-item">
                      <a href="<?= base_url(); ?>customer/addcustomer" class="nav-link <?php echo activate_menu('addcustomer');?>">
                         <i class="nav-icon fas faa-plus"></i>
-                        <p>Add Customer</p>
+                        <p>Tambah Customer</p>
                      </a>
                   </li>
                    <?php } ?>
@@ -153,14 +153,14 @@
                      <li class="nav-item">
                         <a href="<?= base_url(); ?>supplier" class="nav-link <?php echo activate_menu('supplier');?><?php echo activate_menu('editsupplier');?>">
                            <i class="nav-icon fas faa-list"></i>
-                           <p>Supplier Management</p>
+                           <p>Manajemen Supplier</p>
                         </a>
                      </li>
                      <?php } if(userpermission('lr_cust_add')) { ?>
                      <li class="nav-item">
                         <a href="<?= base_url(); ?>supplier/addsupplier" class="nav-link <?php echo activate_menu('addsupplier');?>">
                            <i class="nav-icon fas faa-plus"></i>
-                           <p>Add supplier</p>
+                           <p>Tambah supplier</p>
                         </a>
                      </li>
                      <?php } ?>
