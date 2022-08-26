@@ -25,7 +25,7 @@
 
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                        <label class="form-label">Nama<span class="form-required">*</span></label>
+                        <label class="form-label">Nama Perusahaan<span class="form-required">*</span></label>
                         <input type="text" required="true" class="form-control" value="<?php echo (isset($customerdetails)) ? $customerdetails[0]['c_name']:'' ?>" id="c_name" name="c_name" placeholder="Nama Customer">
                       </div>
                     </div>

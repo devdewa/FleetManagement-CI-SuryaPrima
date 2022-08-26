@@ -24,7 +24,7 @@
                   <thead>
                      <tr>
                         <th class="w-1">No</th>
-                        <th>Nama</th>
+                        <th>Nama Supplier</th>
                         <th>No Telepon</th>
                         <th>Email</th>
                         <th>Alamat</th>

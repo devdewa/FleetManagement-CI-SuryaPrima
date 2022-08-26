@@ -127,13 +127,13 @@
                <table  class="datatableexport table card-table">
                       <thead>
                         <tr>
-                          <th class="w-1">S.No</th>
-                          <th>Vechicle</th>
-                          <th>Date</th>
-                          <th>Description</th>
-                          <th>Amount</th>
-                          <th>Store</th>
-                          <th>Type</th>
+                          <th class="w-1">No</th>
+                          <th>Kendaraan</th>
+                          <th>Tanggal</th>
+                          <th>Deskripsi</th>
+                          <th>Jumlah biaya</th>
+                          <th>Tempat / Supplier</th>
+                          <th>Tipe</th>
                         </tr>
                       </thead>
                       <tbody>

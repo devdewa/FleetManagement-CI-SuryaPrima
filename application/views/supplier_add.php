@@ -25,7 +25,7 @@
 
                     <div class="col-sm-6 col-md-3">
                       <div class="form-group">
-                          <label class="form-label">Nama<span class="form-required">*</span></label>
+                          <label class="form-label">Nama Suppllier<span class="form-required">*</span></label>
                           <input type="text" required="true" class="form-control" value="<?php echo (isset($supplierdetails)) ? $supplierdetails[0]['s_name']:'' ?>" id="s_name" name="s_name" placeholder="Nama Supplier">
                       </div>
                     </div>
